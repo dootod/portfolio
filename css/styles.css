@@ -52,18 +52,143 @@ body {
 
 .content-1 {
     display: flex;
+    align-items: center;
     background-color: #1f2937;
     color: #f9faf8;
     font-family: "Ubuntu", sans-serif;
+    padding: 100px;
 }
 
 .content-1 .content-1-1 {
     display: flex;
     flex-direction: column;
-    padding: 50px;
+    padding: 0 50px;
 }
 
 .content-1 .photo-moi {
     border-radius: 8px;
-    width: 25%;
+    width: 400px;
+}
+
+.content-1-1 .titre {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+.content-1-1 .p-presentation {
+    font-size: 18px;
+}
+
+/* Content 2  */
+
+.content-2 {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    color: black;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    padding: 100px;
+    gap: 50px;
+}
+
+.content-2 .img-content-2 {
+    width: 550px;
+}
+
+.content-2-1 .p-content-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.content-2-1 .titre-content-2 {
+    font-size: 32px;
+    font-weight: 900;
+}
+
+/* Content 3  */
+
+.content-3 {
+    padding: 100px;
+    background-color: #e5e7eb;
+    font-family: "Ubuntu", sans-serif;
+}
+
+.cta {
+    background-color: #3482f6;
+    color: white;
+    padding: 30px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.cta .cta-box {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 10px 30px 30px;
+}
+
+.cta-box .cta-titre {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.cta-box .cta-texte {
+    font-size: 18px;
+}
+
+.cta button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 16px; 
+    cursor: pointer;
+    border-radius: 8px;
+    background-color: #3882f6;
+    color: white;
+    border: 2px solid white;
+    height: 70px; 
+    width: 250px;
+    padding: 0 20px; 
+    margin-top: 90px; 
+}
+
+.cta button:hover {
+    opacity: 60%;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+
+/* Footer  */
+
+.footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #1f2937;
+    color: #f9faf8;
+    font-family: "Montserrat", sans-serif;
+    padding: 50px 0;
+    gap: 20px;
+}
+
+.footer .liens {
+    display: flex;
+    justify-content: center;
+}
+
+.liens ul {
+    display: flex;
+    gap: 200px;
+    align-items: center;
+    list-style: none;
+}
+
+.liens a {
+    font-size: 50px;
+    color: #f9faf8;
 }
