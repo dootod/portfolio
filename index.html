@@ -6,9 +6,24 @@
     <title>Accueil - Portfolio</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="https://kit.fontawesome.com/c6624c50eb.js" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navUl = document.querySelector('.header ul');
+
+            hamburger.addEventListener('click', function() {
+                navUl.classList.toggle('active');
+            });
+        });
+    </script>
 </head>
 <body>
     <div class="header">
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
         <ul>
             <li><i class="fa-solid fa-code"></i></li>
             <li><a href="#">Accueil</a></li>
@@ -88,7 +103,6 @@
         <div class="copyright">
             <p class="p-1">
                 <span class="copyright-1">© 2025 Thomas Dumont. Tous droits réservés.</span> <br> <br>
-                Le code source de ce site est protégé par le copyright. <br> <br>
                 Les images utilisées peuvent être soumises à des droits d'auteur de leurs propriétaires 
                 respectifs.
             </p>
