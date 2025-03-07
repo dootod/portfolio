@@ -80,7 +80,7 @@ body {
 }
 
 .hamburger:hover {
-    background-color: gray;
+    background-color: #f9faf8;
     border-radius: 5px; 
 }
 

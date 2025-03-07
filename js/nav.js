@@ -1,5 +1,3 @@
-// nav.js
-
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('.header ul');
