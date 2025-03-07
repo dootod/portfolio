@@ -35,20 +35,37 @@ body {
 
 .header ul li a {
     font-family: "Montserrat", sans-serif;
-    font-size: 16px; 
+    font-size: 18px; 
     color: #f9faf8;
     text-decoration: none;
-    padding: 10px 15px; 
+    padding: 15px 20px; 
+    position: relative; 
+    opacity: 1; 
+    transition: opacity 0.3s ease; 
 }
 
 .header ul li a:hover {
-    background-color: #2c384a;
-    transition: 0.3s;
-    text-decoration: underline;
+    opacity: 0.8; 
+}
+
+/* Effet de surlignage fluide */
+.header ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #f9faf8;
+    bottom: 10px;
+    left: 0; 
+    transition: width 0.3s ease; 
+}
+
+.header ul li a:hover::after {
+    width: 100%; 
 }
 
 .header ul li .fa-solid {
-    font-size: 30px; 
+    font-size: 36px; 
     color: #f9faf8;
 }
 
@@ -76,6 +93,23 @@ body {
 
 .hamburger:hover .line {
     background-color: #1f2937; 
+}
+
+/* Animation des lignes du hamburger */
+.hamburger.open .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.open .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hamburger .line {
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
 @media (max-width: 768px) {
@@ -127,6 +161,7 @@ body {
     border-radius: 8px;
     width: 100%;
     max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .content-1-1 .titre {
@@ -156,6 +191,7 @@ body {
 .content-2 .img-content-2 {
     width: 100%;
     max-width: 550px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
 .content-2-1 .p-content-2 {
@@ -225,12 +261,7 @@ body {
     max-width: 250px;
     padding: 0 20px;
     margin-top: 20px;
-}
-
-.cta button:hover {
-    opacity: 60%;
-    transition: 0.3s;
-    text-decoration: underline;
+    transition: background-color 0.3s ease, transform 0.3s ease; 
 }
 
 /* Footer  */
@@ -269,11 +300,12 @@ body {
 .liens a {
     font-size: 3rem; 
     color: #f9faf8;
+    transition: color 0.3s ease, transform 0.3s ease; 
 }
 
 .liens a:hover {
-    color: gray;
-    transition: 0.3s;
+    color: #3882f6; 
+    transform: translateY(-5px); 
 }
 
 .copyright {
