@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navUl = document.querySelector('.header ul');
     const navLinks = document.querySelectorAll('.header ul li a');
+    const images = document.querySelectorAll('.content-2 img, .content-3 img, .content-4 img, .content-5 img, .content-6 img');
     const footerLinks = document.querySelectorAll('.footer .liens a');
 
     // Animation du menu hamburger
@@ -18,6 +19,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
         link.addEventListener('mouseleave', function() {
             this.style.opacity = '1';
+        });
+    });
+
+    // Animation au survol des images
+    images.forEach(image => {
+        image.addEventListener('mouseenter', function() {
+            this.style.transform = 'scale(1.05)';
+            this.style.boxShadow = '0 10px 20px rgba(0, 0, 0, 0.3)';
+        });
+
+        image.addEventListener('mouseleave', function() {
+            this.style.transform = 'scale(1)';
+            this.style.boxShadow = 'none';
         });
     });
 
