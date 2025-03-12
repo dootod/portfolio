@@ -251,14 +251,28 @@ body {
     gap: 5%;
     justify-content: center;
     flex-wrap: wrap;
-    text-align: center; 
 }
 
+/* Content 1 */
 .content-1 {
     background-color: #1f2937;
     color: white;
+    flex-direction: column; /* Titre au-dessus du paragraphe */
+    text-align: left; /* Texte aligné à gauche */
 }
 
+.content-1 .title-1 {
+    font-size: 2.5rem; /* Taille de police des titres */
+    font-weight: 900;
+    margin-bottom: 20px; /* Espace entre le titre et le paragraphe */
+}
+
+.content-1 .p-1 {
+    font-size: 1.125rem;
+    max-width: 600px;
+}
+
+/* Content 2, 3, 4, 5, 6 */
 .content-2, .content-5 {
     background-color: white;
     color: black;
@@ -274,12 +288,12 @@ body {
     color: white;
 }
 
-.content-1 .title-1, .content-2 .title-2, .content-3 .title-3, .content-4 .title-4, .content-5 .title-5, .content-6 .title-6 {
-    font-size: 2.5rem;
+.content-2 .title-2, .content-3 .title-3, .content-4 .title-4, .content-5 .title-5, .content-6 .title-6 {
+    font-size: 2.5rem; /* Taille de police des titres */
     font-weight: 900;
 }
 
-.content-1 .p-1, .content-2 .p-2, .content-3 .p-3, .content-4 .p-4, .content-5 .p-5, .content-6 .p-6 {
+.content-2 .p-2, .content-3 .p-3, .content-4 .p-4, .content-5 .p-5, .content-6 .p-6 {
     font-size: 1.125rem;
     max-width: 600px;
 }
@@ -295,10 +309,10 @@ body {
 @media (max-width: 768px) {
     .content-1, .content-2, .content-3, .content-4, .content-5, .content-6 {
         flex-direction: column;
-        text-align: center;
+        text-align: left; /* Texte aligné à gauche */
     }
 
     .content-2 img, .content-3 img, .content-4 img, .content-5 img, .content-6 img {
-        margin-bottom: 20px; 
+        margin-bottom: 20px; /* Espace entre l'image et le texte */
     }
 }
