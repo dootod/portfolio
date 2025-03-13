@@ -7,19 +7,18 @@
     <link rel="stylesheet" href="../css/contact.css">
     <script src="https://kit.fontawesome.com/c6624c50eb.js" crossorigin="anonymous"></script>
 
-            <!-- Favicon standard -->
-            <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
-            <link rel="shortcut icon" href="../img/favicon_io/favicon.ico">
-        
-            <!-- Apple Touch Icon (iPhone, iPad) -->
-            <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
-        
-            <!-- Android (Chrome) -->
-            <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_io/android-chrome-192x192.png">
-            <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon_io/android-chrome-512x512.png">
-            <link rel="manifest" href="../img/favicon_io/site.webmanifest">
-            
+    <!-- Favicon standard -->
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../img/favicon_io/favicon-16x16.png">
+    <link rel="shortcut icon" href="../img/favicon_io/favicon.ico">
+
+    <!-- Apple Touch Icon (iPhone, iPad) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../img/favicon_io/apple-touch-icon.png">
+
+    <!-- Android (Chrome) -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../img/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../img/favicon_io/android-chrome-512x512.png">
+    <link rel="manifest" href="../img/favicon_io/site.webmanifest">
 </head>
 <body>
     <div class="header">
@@ -37,7 +36,47 @@
         </ul>
     </div>
 
-    <!-- Le contenu spécifique à chaque page sera inséré ici -->
+    <!-- Contenu de la page Contact -->
+    <div class="contact-container">
+        <h1 class="contact-title">Me contacter</h1>
+
+        <!-- Formulaire de contact -->
+        <form id="contact-form" action="../php/contact.php" method="POST" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="submit-button">Envoyer</button>
+        </form>
+
+        <!-- Carré avec mes informations -->
+        <div class="info-box">
+            <h2>Mes informations</h2>
+            <p><strong>Nom :</strong> Thomas Dumont</p>
+            <p><strong>Email :</strong> thomas.dumont1806@gmail.com</p>
+            <p><strong>Téléphone :</strong> +33 7 54 38 73 86</p>
+            <p><strong>Adresse :</strong> Cholet, France</p>
+        </div>
+
+        <!-- Liens vers mes réseaux -->
+        <div class="social-links">
+            <h2>Mes réseaux</h2>
+            <ul>
+                <li><a href="https://github.com/dootod" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a></li>
+                <li><a href="mailto:thomas.dumont1806@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i> Email</a></li>
+                <li><a href="tel:+33754387386" target="_blank"><i class="fa-solid fa-phone"></i> Téléphone</a></li>
+                <li><a href="https://fr.linkedin.com/" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a></li>
+            </ul>
+        </div>
+    </div>
 
     <div class="footer">
         <div class="liens">

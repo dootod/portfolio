@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navUl = document.querySelector('.header ul');
     const navLinks = document.querySelectorAll('.header ul li a');
     const footerLinks = document.querySelectorAll('.footer .liens a');
+    const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
 
     // Animation du menu hamburger
     hamburger.addEventListener('click', function() {
@@ -31,6 +32,19 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('mouseleave', function() {
             this.style.color = '#f9faf8';
             this.style.transform = 'translateY(0)';
+        });
+    });
+
+    // Animation au focus des champs du formulaire
+    formInputs.forEach(input => {
+        input.addEventListener('focus', function() {
+            this.style.borderColor = '#3882f6';
+            this.style.boxShadow = '0 0 5px rgba(56, 130, 246, 0.5)';
+        });
+
+        input.addEventListener('blur', function() {
+            this.style.borderColor = '#e5e7eb';
+            this.style.boxShadow = 'none';
         });
     });
 });
