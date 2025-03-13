@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.header ul li a');
     const footerLinks = document.querySelectorAll('.footer .liens a');
     const formInputs = document.querySelectorAll('.contact-form input, .contact-form textarea');
+    const form = document.getElementById('contact-form');
+    const notification = document.getElementById('notification');
 
     // Animation du menu hamburger
     hamburger.addEventListener('click', function() {
@@ -45,6 +47,33 @@ document.addEventListener('DOMContentLoaded', function() {
         input.addEventListener('blur', function() {
             this.style.borderColor = '#e5e7eb';
             this.style.boxShadow = 'none';
+        });
+    });
+
+    // Gestion du formulaire
+    form.addEventListener('submit', function(e) {
+        e.preventDefault(); // Empêcher le rechargement de la page
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(data => {
+            if (data === "success") {
+                // Afficher la notification
+                notification.classList.add('show');
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                }, 3000); // Masquer la notification après 3 secondes
+            } else {
+                alert("Une erreur s'est produite.");
+            }
+        })
+        .catch(error => {
+            console.error('Erreur :', error);
         });
     });
 });

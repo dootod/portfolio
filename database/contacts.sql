@@ -44,7 +44,7 @@ CREATE TABLE `contacts` (
 -- Index pour la table `contacts`
 --
 ALTER TABLE `contacts`
-  ADD PRIMARY KEY (`id`);
+  ADD UNIQUE KEY `id` (`id`);
 
 --
 -- AUTO_INCREMENT pour les tables déchargées

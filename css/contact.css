@@ -177,9 +177,6 @@ body {
     border-radius: 4px;
     font-size: 1rem;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.form-group textarea {
     resize: none; /* Empêche le redimensionnement */
 }
 
@@ -265,12 +262,33 @@ body {
 }
 
 .social-links ul li a i {
-    font-size: 2rem; 
+    font-size: 2rem; /* Taille des icônes augmentée */
 }
 
 .social-links ul li a:hover {
     color: #1f2937;
     transform: translateY(-2px);
+}
+
+/* Notification */
+.notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #3882f6;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateX(100%);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    z-index: 1000;
+}
+
+.notification.show {
+    opacity: 1;
+    transform: translateX(0);
 }
 
 /* Footer */
