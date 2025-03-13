@@ -257,14 +257,14 @@ body {
 .content-1 {
     background-color: #1f2937;
     color: white;
-    flex-direction: column;
+    flex-direction: column; 
     text-align: left; 
 }
 
 .content-1 .title-1 {
     font-size: 2.5rem; 
     font-weight: 900;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 .content-1 .p-1 {
@@ -289,7 +289,7 @@ body {
 }
 
 .content-2 .title-2, .content-3 .title-3, .content-4 .title-4, .content-5 .title-5, .content-6 .title-6 {
-    font-size: 2.5rem; 
+    font-size: 2.5rem; /* Taille de police des titres */
     font-weight: 900;
 }
 
@@ -310,6 +310,7 @@ body {
     .content-1, .content-2, .content-3, .content-4, .content-5, .content-6 {
         flex-direction: column;
         text-align: left; 
+        padding: 10%; 
     }
 
     .content-2 img, .content-3 img, .content-4 img, .content-5 img, .content-6 img {
