@@ -49,31 +49,4 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.boxShadow = 'none';
         });
     });
-
-    // Gestion du formulaire
-    form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Empêcher le rechargement de la page
-
-        const formData = new FormData(form);
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.text())
-        .then(data => {
-            if (data === "success") {
-                // Afficher la notification
-                notification.classList.add('show');
-                setTimeout(() => {
-                    notification.classList.remove('show');
-                }, 3000); // Masquer la notification après 3 secondes
-            } else {
-                alert("Une erreur s'est produite.");
-            }
-        })
-        .catch(error => {
-            console.error('Erreur :', error);
-        });
-    });
 });
