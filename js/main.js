@@ -41,6 +41,14 @@ document.addEventListener('DOMContentLoaded', function () {
       const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
       bsDropdown.hide();
     });
+
+    // Mobile: click-only, ensure chevron follows state
+    toggle.addEventListener('click', () => {
+      setTimeout(() => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        if (expanded) dd.classList.add('show'); else dd.classList.remove('show');
+      }, 0);
+    });
   });
 
   // Ink bar logic

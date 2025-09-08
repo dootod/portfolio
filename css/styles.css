@@ -42,6 +42,9 @@ body {
 .navbar .nav-link { color: #ccd6f6; position: relative; }
 .navbar .nav-link:hover, .navbar .nav-link:focus { color: #fff; }
 .navbar .nav-link.active, .navbar .dropdown-toggle.show { color: #fff; }
+.navbar .dropdown-toggle::after { display: none; }
+.nav-item-link .chevron { transition: transform .2s ease; }
+.dropdown.show .chevron { transform: rotate(180deg); }
 .navbar .btn { border-radius: 999px; }
 .navbar .dropdown-menu { 
   background-color: rgba(19,28,59,0.95);
@@ -91,6 +94,22 @@ body {
 
 /* Footer */
 .footer { background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border-top: 1px solid rgba(255,255,255,.12); }
+/* Neo footer */
+.footer-neo { position: relative; overflow: hidden; }
+.footer-neo .footer-canvas { position:absolute; inset:0; pointer-events:none; }
+.footer-neo .footer-canvas .stripe, .footer-neo .footer-canvas .dots { display: none; }
+.footer-neo .glass-panel { border-radius: 18px; padding: 24px; background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03)); border: 1px solid rgba(255,255,255,.12); backdrop-filter: blur(8px) saturate(140%); box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+.footer-neo .brandline .mark { display:inline-grid; place-items:center; width:46px; height:46px; border-radius:14px; background: rgba(255,255,255,.10); border:1px solid rgba(255,255,255,.2); font-weight:700; color:#fff; }
+.footer-neo .brandline .who { font-weight:600; }
+.footer-neo .brandline .role { color:#b7c2e0; font-size:.95rem; }
+.footer-neo .contact-link { color:#e7edff; text-decoration:none; transition: color .2s ease, transform .2s ease; }
+.footer-neo .contact-link:hover { color:#fff; transform: translateX(2px); }
+.footer-neo .actions .btn { border-radius: 999px; }
+.footer-neo .social .icon { display:inline-flex; align-items:center; justify-content:center; width:42px; height:42px; border-radius:999px; background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.1); color:#e7edff; transition: transform .2s ease, box-shadow .25s ease, background-color .2s ease; }
+.footer-neo .social .icon:hover { transform: translateY(-2px) scale(1.06); box-shadow:0 10px 22px rgba(0,0,0,.35); background: rgba(255,255,255,.12); }
+.footer-neo .meta { border-top: 1px solid rgba(255,255,255,.12); margin-top: 18px; padding-top: 16px; color:#b7c2e0; }
+.footer-neo .meta a { color:#cfd8ff; text-decoration:none; }
+.footer-neo .meta a:hover { color:#fff; }
 
 /* Utilities */
 .text-secondary { color: #b7c2e0 !important; }
@@ -164,6 +183,9 @@ body {
 .btn-animated:before { content: ""; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(120deg, transparent, rgba(255,255,255,.25), transparent); transition: left .4s ease; }
 .btn-animated:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(0,0,0,.35); }
 .btn-animated:hover:before { left: 100%; }
+.btn-animated:active { transform: translateY(0); box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+.btn-primary.btn-animated { background-image: linear-gradient(135deg, rgba(91,141,239,.95), rgba(75,124,222,.95)); }
+.btn-primary.btn-animated:hover { background-image: linear-gradient(135deg, rgba(98,148,246,.98), rgba(82,131,229,.98)); }
 .btn-outline-light.btn-animated { border-color: rgba(255,255,255,.55); color: #e9eef7; }
 .btn-outline-light.btn-animated:hover { background: rgba(255,255,255,.08); }
 /* Ensure all buttons adopt animation */

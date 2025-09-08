@@ -24,7 +24,7 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 
     <!-- Custom CSS -->
-    <link href="assets/css/styles.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
   </head>
   <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
     <!-- Navbar -->
@@ -40,16 +40,16 @@
           <div class="nav-shell">
             <ul class="nav-menu">
               <li><a class="nav-item-link" href="index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a></li>
-              <li><a class="nav-item-link" href="projets.html"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
+              <li><a class="nav-item-link" href="#"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
               <li class="dropdown">
-                <a class="nav-item-link dropdown-toggle" href="#" id="btsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-mortarboard me-1"></i>BTS SIO</a>
+                <a class="nav-item-link dropdown-toggle" href="#" id="btsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-mortarboard me-1"></i>BTS SIO <i class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end">
-                  <li><a class="dropdown-item" href="certifications.html">Certifications</a></li>
-                  <li><a class="dropdown-item" href="veille.html">Veille technologique</a></li>
-                  <li><a class="dropdown-item" href="e5.html">Épreuve E5</a></li>
+                  <li><a class="dropdown-item" href="#">Certifications</a></li>
+                  <li><a class="dropdown-item" href="#">Veille technologique</a></li>
+                  <li><a class="dropdown-item" href="#">Épreuve E5</a></li>
                 </ul>
               </li>
-              <li><a class="nav-item-link cta btn-animated" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+              <li><a class="nav-item-link cta btn-animated" href="#"><i class="bi bi-envelope me-1"></i>Contact</a></li>
             </ul>
             <span class="nav-ink" id="navInk"></span>
           </div>
@@ -279,7 +279,7 @@
               </div>
               <!-- PHP -->
               <div class="col-4 col-sm-3 col-md-2 text-center" data-aos="zoom-in" data-aos-delay="125">
-                <div class="skill-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Bases : logique serveur, formulaires, mini-CRUD.">
+                <div class="skill-item" data-bs-toggle="tooltip" data-bs-placement="top" title="Bases : logique serveur, formulaires.">
                   <i class="devicon-php-plain colored"></i>
                   <span>PHP</span>
                 </div>
@@ -314,23 +314,52 @@
     
 
     <!-- Footer / Contact -->
-    <footer id="contact" class="section-padding footer text-light">
-      <div class="container">
-        <div class="row gy-4 align-items-center">
-          <div class="col-lg-6" data-aos="fade-right">
-            <h2 class="h3 mb-3">Me contacter</h2>
-            <p class="mb-2"><i class="bi bi-envelope me-2"></i><a class="link-light" href="mailto:contact@example.com">contact@example.com</a></p>
-            <p class="mb-0"><i class="bi bi-geo-alt me-2"></i>Cholet (49300) — France</p>
-          </div>
-          <div class="col-lg-6 text-lg-end" data-aos="fade-left">
-            <a class="btn btn-outline-light me-2 btn-animated" href="#accueil"><i class="bi bi-arrow-up"></i> Haut de page</a>
-            <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-envelope me-1"></i>Formulaire de contact</a>
+    <footer id="contact" class="section-padding footer text-light footer-neo">
+      <div class="footer-canvas" aria-hidden="true">
+        <span class="stripe s1"></span>
+        <span class="stripe s2"></span>
+        <span class="stripe s3"></span>
+        <span class="dots"></span>
+      </div>
+      <div class="container position-relative">
+        <div class="glass-panel">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+              <div class="brandline d-flex align-items-center gap-3 mb-2">
+                <span class="mark">TD</span>
+                <div>
+                  <div class="who">Thomas Dumont</div>
+                  <div class="role">Développement web • SLAM</div>
+                </div>
+              </div>
+              <div class="contacts d-flex flex-column gap-2">
+                <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73 86</a>
+                <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i class="bi bi-envelope"></i> thomas.dumont1806@gmail.com</a>
+                <span class="contact-link"><i class="bi bi-geo-alt"></i> Cholet • Le Mans</span>
+              </div>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+                <a class="btn btn-outline-light btn-animated" href="#accueil"><i class="bi bi-arrow-up"></i> Haut de page</a>
+                <a class="btn btn-primary btn-animated" href="#"><i class="bi bi-chat-dots"></i> Me contacter</a>
+              </div>
+              <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+                <a class="icon" href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a class="icon" href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a class="icon" href="#" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
           </div>
         </div>
-        <hr class="border-light-subtle my-4" />
-        <div class="d-flex justify-content-between flex-wrap gap-2 small text-secondary">
-          <span>© <span id="year"></span> Thomas Dumont. Tous droits réservés.</span>
-          <span>Construit avec Bootstrap • Animations AOS</span>
+        <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+          <span>© <span id="year"></span> Thomas Dumont</span>
+          <span class="links d-flex gap-3">
+            <a href="#">Accueil</a>
+            <a href="#">Projets</a>
+            <a href="#">Certifications</a>
+            <a href="#">Veille technologique</a>
+            <a href="#">Épreuve E5</a>
+          </span>
         </div>
       </div>
     </footer>
@@ -338,7 +367,7 @@
     <!-- JS Libraries -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="js/main.js"></script>
   </body>
   </html>
 
