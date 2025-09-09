@@ -224,4 +224,96 @@ body {
 .title-accent { position: relative; display: block; padding-bottom: 6px; text-align: center; width: 100%; }
 .title-accent:after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 72px; height: 3px; background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary)); border-radius: 3px; }
 
+/* Contact Page Styles */
+.contact-hero {
+  min-height: 60vh;
+  padding-top: 120px;
+  position: relative;
+}
 
+.contact-form-container {
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 2.5rem;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.25);
+}
+
+.contact-info-card {
+  background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 16px;
+  padding: 2rem;
+  height: 100%;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  color: #e9eef7;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.contact-info-item:hover {
+  color: #fff;
+  transform: translateX(5px);
+}
+
+.contact-info-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(91,141,239,.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-size: 1.5rem;
+  color: var(--brand-primary);
+}
+
+.form-control {
+  background: rgba(255,255,255,.08);
+  border: 1px solid rgba(255,255,255,.15);
+  color: #e9eef7;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  background: rgba(255,255,255,.12);
+  border-color: var(--brand-primary);
+  color: #fff;
+  box-shadow: 0 0 0 0.25rem rgba(91,141,239,.25);
+}
+
+.form-control::placeholder {
+  color: #b7c2e0;
+}
+
+.alert {
+  border-radius: 10px;
+  border: none;
+}
+
+.map-container {
+  border-radius: 16px;
+  overflow: hidden;
+  height: 300px;
+  border: 1px solid rgba(255,255,255,.12);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-form-container {
+    padding: 1.5rem;
+  }
+  
+  .contact-info-card {
+    margin-top: 2rem;
+  }
+}

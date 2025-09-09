@@ -1,0 +1,33 @@
+# Interdire l'accès direct aux fichiers .env
+<Files ".env">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Interdire l'accès aux fichiers de sauvegarde et temporaires
+<FilesMatch "\.(bak|backup|old|tmp|temp|log|txt)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Sécurité générale
+Options -Indexes
+ServerSignature Off
+
+# Protection contre l'inclusion de fichiers
+<Files "*.php">
+    <RequireAll>
+        Require all granted
+        # Bloquer les requêtes avec des caractères dangereux
+        Require not expr "%{QUERY_STRING} =~ /(\<|%3C).*script.*(\>|%3E)/NC"
+        Require not expr "%{REQUEST_URI} =~ /(\<|%3C).*script.*(\>|%3E)/NC"
+    </RequireAll>
+</Files>
+
+# Headers de sécurité
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>

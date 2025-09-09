@@ -97,6 +97,43 @@ document.addEventListener('DOMContentLoaded', function () {
   // Also reset on resize (handles mobile collapse)
   window.addEventListener('resize', resetInkToActive);
   resetInkToActive();
+
+    // Contact form validation
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      let isValid = true;
+      const requiredFields = contactForm.querySelectorAll('[required]');
+      
+      requiredFields.forEach(field => {
+        if (!field.value.trim()) {
+          isValid = false;
+          field.classList.add('is-invalid');
+        } else {
+          field.classList.remove('is-invalid');
+        }
+      });
+      
+      // Email validation
+      const emailField = contactForm.querySelector('input[type="email"]');
+      if (emailField && emailField.value) {
+        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailPattern.test(emailField.value)) {
+          isValid = false;
+          emailField.classList.add('is-invalid');
+        }
+      }
+      
+      if (!isValid) {
+        e.preventDefault();
+        // Scroll to first error
+        const firstError = contactForm.querySelector('.is-invalid');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    });
+  }
 });
 
 

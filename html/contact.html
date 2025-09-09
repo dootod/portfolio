@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Contact - Thomas Dumont</title>
+    <meta name="description" content="Contactez Thomas Dumont, étudiant en BTS SIO SLAM, pour discuter de projets ou d'opportunités professionnelles." />
+    <meta name="author" content="Thomas Dumont" />
+    <meta property="og:title" content="Contact - Thomas Dumont" />
+    <meta property="og:description" content="Contactez Thomas Dumont, étudiant en BTS SIO SLAM." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="../css/styles.css" rel="stylesheet" />
+  </head>
+  <body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
+      <div class="container d-flex align-items-center justify-content-between">
+        <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
+
+        <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+          <div class="nav-shell">
+            <ul class="nav-menu">
+              <li><a class="nav-item-link" href="../index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a></li>
+              <li><a class="nav-item-link" href="#"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
+              <li class="dropdown">
+                <a class="nav-item-link dropdown-toggle" href="#" id="btsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi bi-mortarboard me-1"></i>BTS SIO <i class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu dropdown-menu-end">
+                  <li><a class="dropdown-item" href="#">Certifications</a></li>
+                  <li><a class="dropdown-item" href="#">Veille technologique</a></li>
+                  <li><a class="dropdown-item" href="#">Épreuve E5</a></li>
+                </ul>
+              </li>
+              <li><a class="nav-item-link cta btn-animated active" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+            </ul>
+            <span class="nav-ink" id="navInk"></span>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Contact -->
+    <header class="contact-hero d-flex align-items-center">
+      <div class="container py-5">
+        <div class="row justify-content-center text-center" data-aos="fade-up">
+          <div class="col-lg-8">
+            <span class="badge rounded-pill text-bg-dark-subtle border border-secondary-subtle px-3 py-2">Disponible pour stage/alternance</span>
+            <h1 class="display-4 fw-bold mt-3">Me contacter</h1>
+            <p class="lead text-secondary">Une question, un projet ou une opportunité ? N'hésitez pas à me contacter, je serai ravi d'échanger avec vous.</p>
+          </div>
+        </div>
+      </div>
+      <div class="hero-wave"></div>
+    </header>
+
+    <!-- Messages de statut -->
+    <div class="container">
+      <div id="statusMessage" class="row justify-content-center mt-3" style="display: none;">
+        <div class="col-lg-8">
+          <div id="alertSuccess" class="alert alert-success alert-dismissible fade show" role="alert" style="display: none;">
+            Votre message a été envoyé avec succès ! Je vous répondrai dès que possible.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+          <div id="alertError" class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+            Une erreur s'est produite lors de l'envoi du message. Veuillez réessayer.
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="section-padding">
+      <div class="container">
+        <div class="row g-5">
+          <!-- Contact Form -->
+          <div class="col-lg-8" data-aos="fade-right">
+            <div class="contact-form-container">
+              <h2 class="mb-4">Envoyez-moi un message</h2>
+              
+              <form id="contactForm" action="../php/send_email.php" method="POST">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <label for="name" class="form-label">Nom complet</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir votre nom complet.
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <label for="email" class="form-label">Adresse email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir une adresse email valide.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="subject" class="form-label">Sujet</label>
+                    <input type="text" class="form-control" id="subject" name="subject" required>
+                    <div class="invalid-feedback">
+                      Veuillez saisir un sujet.
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                    <div class="invalid-feedback">
+                      Veuillez saisir votre message.
+                    </div>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary btn-lg btn-animated w-100" id="submitBtn">
+                      <i class="bi bi-send me-2"></i>Envoyer le message
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          
+          <!-- Contact Info -->
+          <div class="col-lg-4" data-aos="fade-left" data-aos-delay="100">
+            <div class="contact-info-card">
+              <h3 class="mb-4">Mes coordonnées</h3>
+              
+              <a href="tel:+33754387386" class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-telephone"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">Téléphone</div>
+                  <div>07 54 38 73 86</div>
+                </div>
+              </a>
+              
+              <a href="mailto:thomas.dumont1806@gmail.com" class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">Email</div>
+                  <div>thomas.dumont1806@gmail.com</div>
+                </div>
+              </a>
+              
+              <div class="contact-info-item">
+                <div class="contact-info-icon">
+                  <i class="bi bi-geo-alt"></i>
+                </div>
+                <div>
+                  <div class="fw-semibold">Localisation</div>
+                  <div>Cholet • Le Mans, France</div>
+                </div>
+              </div>
+              
+              <div class="mt-4 pt-3">
+                <h4 class="mb-3">Réseaux sociaux</h4>
+                <div class="d-flex gap-3">
+                  <a href="https://github.com/dootod" target="_blank" class="btn btn-outline-light btn-animated">
+                    <i class="bi bi-github me-2"></i>GitHub
+                  </a>
+                  <a href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank" class="btn btn-outline-light btn-animated">
+                    <i class="bi bi-linkedin me-2"></i>LinkedIn
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Map Section -->
+        <div class="row mt-5" data-aos="fade-up" data-aos-delay="150">
+          <div class="col-12">
+            <h3 class="text-center mb-4">Je suis situé dans la région Pays de la Loire</h3>
+            <div class="map-container">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d87708.8391117327!2d-0.9333262000000001!3d47.076669200000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4806a7f54e7452c5%3A0x408ab2ae4bb9d60!2sCholet!5e0!3m2!1sfr!2sfr!4v1698765432105!5m2!1sfr!2sfr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="section-padding footer text-light footer-neo">
+      <div class="footer-canvas" aria-hidden="true">
+        <span class="stripe s1"></span>
+        <span class="stripe s2"></span>
+        <span class="stripe s3"></span>
+        <span class="dots"></span>
+      </div>
+      <div class="container position-relative">
+        <div class="glass-panel">
+          <div class="row g-4 align-items-center">
+            <div class="col-lg-7">
+              <div class="brandline d-flex align-items-center gap-3 mb-2">
+                <span class="mark">TD</span>
+                <div>
+                  <div class="who">Thomas Dumont</div>
+                  <div class="role">Développement web • Applications</div>
+                </div>
+              </div>
+              <div class="contacts d-flex flex-column gap-2">
+                <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73 86</a>
+                <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i class="bi bi-envelope"></i> thomas.dumont1806@gmail.com</a>
+                <span class="contact-link"><i class="bi bi-geo-alt"></i> Cholet • Le Mans</span>
+              </div>
+            </div>
+            <div class="col-lg-5 text-lg-end">
+              <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+                <a class="btn btn-outline-light btn-animated" href="#mainNav"><i class="bi bi-arrow-up"></i> Haut de page</a>
+                <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i> Me contacter</a>
+              </div>
+              <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+                <a class="icon" href="https://github.com/dootod" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+          <span>© <span id="year"></span> Thomas Dumont</span>
+          <span class="links d-flex gap-3">
+            <a href="../index.html">Accueil</a>
+            <a href="#">Projets</a>
+            <a href="#">Certifications</a>
+            <a href="#">Veille technologique</a>
+            <a href="#">Épreuve E5</a>
+          </span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+
+    <script>
+      // Gestion des messages de statut via URL
+      document.addEventListener('DOMContentLoaded', function() {
+        const urlParams = new URLSearchParams(window.location.search);
+        const status = urlParams.get('status');
+        
+        if (status === 'success') {
+          document.getElementById('statusMessage').style.display = 'block';
+          document.getElementById('alertSuccess').style.display = 'block';
+          // Supprimer le paramètre de l'URL
+          window.history.replaceState({}, '', window.location.pathname);
+        } else if (status === 'error') {
+          document.getElementById('statusMessage').style.display = 'block';
+          document.getElementById('alertError').style.display = 'block';
+          // Supprimer le paramètre de l'URL
+          window.history.replaceState({}, '', window.location.pathname);
+        }
+        
+        // Générer un token CSRF
+        generateCSRFToken();
+        
+        // Compteur de caractères pour le message
+        const messageField = document.getElementById('message');
+        const charCount = document.getElementById('charCount');
+        
+        if (messageField && charCount) {
+          messageField.addEventListener('input', function() {
+            charCount.textContent = this.value.length;
+            if (this.value.length > 1800) {
+              charCount.style.color = '#dc3545';
+            } else {
+              charCount.style.color = '';
+            }
+          });
+        }
+      });
+      
+      // Générer token CSRF
+      function generateCSRFToken() {
+        fetch('../php/get_csrf_token.php')
+          .then(response => response.text())
+          .then(token => {
+            document.getElementById('csrfToken').value = token;
+          })
+          .catch(error => {
+            console.log('Token CSRF non disponible');
+          });
+      }
+    </script>
+  </body>
+</html>
