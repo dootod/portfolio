@@ -46,7 +46,8 @@ document.addEventListener('DOMContentLoaded', function () {
     toggle.addEventListener('click', () => {
       setTimeout(() => {
         const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        if (expanded) dd.classList.add('show'); else dd.classList.remove('show');
+        if (expanded) dd.classList.add('show');
+        else dd.classList.remove('show');
       }, 0);
     });
   });
@@ -98,5 +99,3 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', resetInkToActive);
   resetInkToActive();
 });
-
-

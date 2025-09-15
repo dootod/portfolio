@@ -61,6 +61,19 @@ body {
 .navbar .dropdown-item:hover, .navbar .dropdown-item:focus { color: #fff; background: rgba(255,255,255,0.08); transform: translateX(2px); }
 .navbar .dropdown-item.active { color: #fff; background: rgba(91,141,239,0.25); }
 
+/* Animation de la flèche du dropdown au survol (Desktop seulement) */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .chevron {
+    transform: rotate(180deg);
+  }
+  
+  /* S'assurer que la flèche reste tournée quand le menu est ouvert */
+  .navbar .dropdown.show .chevron,
+  .navbar .dropdown:hover .dropdown.show .chevron {
+    transform: rotate(180deg);
+  }
+}
+
 /* Sections */
 .section-padding { padding: 80px 0; scroll-margin-top: 90px; }
 .section-title { font-weight: 700; margin-bottom: 18px; }
@@ -223,5 +236,3 @@ body {
 .section-divider { height: 2px; width: min(92%, 1100px); margin: 6px auto 0; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.18), transparent); border-radius: 2px; }
 .title-accent { position: relative; display: block; padding-bottom: 6px; text-align: center; width: 100%; }
 .title-accent:after { content: ""; position: absolute; left: 50%; transform: translateX(-50%); bottom: 0; width: 72px; height: 3px; background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary)); border-radius: 3px; }
-
-
