@@ -240,9 +240,11 @@
   0% {
     box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.7);
   }
+
   70% {
     box-shadow: 0 0 0 10px rgba(91, 141, 239, 0);
   }
+
   100% {
     box-shadow: 0 0 0 0 rgba(91, 141, 239, 0);
   }
@@ -267,21 +269,21 @@
     min-height: auto;
     padding: 80px 0 40px;
   }
-  
+
   .contact-card {
     margin-top: 30px;
   }
-  
+
   .map-container {
     height: 250px;
     margin-bottom: 30px;
   }
-  
+
   .faq-accordion .accordion-button {
     padding: 16px;
     font-size: 0.95rem;
   }
-  
+
   .faq-accordion .accordion-body {
     padding: 16px;
   }

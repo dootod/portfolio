@@ -36,7 +36,7 @@
   <!-- Navbar -->
   <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
     <div class="container d-flex align-items-center justify-content-between">
-      <a class="navbar-brand fw-semibold me-3" href="index.html#accueil">TD<span class="brand-dot">.</span></a>
+      <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
 
       <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,7 +46,8 @@
       <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
         <div class="nav-shell">
           <ul class="nav-menu">
-            <li><a class="nav-item-link" href="index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a></li>
+            <li><a class="nav-item-link" href="../index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a>
+            </li>
             <li><a class="nav-item-link" href="#"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
             <li class="dropdown">
               <a class="nav-item-link dropdown-toggle" href="#" id="btsDropdown" role="button" data-bs-toggle="dropdown"
@@ -80,7 +81,7 @@
           <div class="d-flex gap-2 flex-wrap mt-3">
             <a href="#contact-info" class="btn btn-primary btn-lg btn-animated"><i class="bi bi-chat-dots me-2"></i>Me
               contacter</a>
-            <a href="pdf/cv-stage.pdf" target="_blank" class="btn btn-outline-light btn-lg btn-animated"><i
+            <a href="../pdf/cv-stage.pdf" target="_blank" class="btn btn-outline-light btn-lg btn-animated"><i
                 class="bi bi-file-earmark-arrow-down me-2"></i>Télécharger mon CV</a>
           </div>
         </div>
@@ -181,9 +182,9 @@
                 <div class="card-body p-0">
                   <div class="map-placeholder">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d172725.7092756658!2d-1.0069722999999999!3d47.0592565!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48063381b6d19d2f%3A0x40d37521e0de690!2s49300%20Cholet!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
-                      width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                      referrerpolicy="no-referrer-when-downgrade">
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d43200.84263707065!2d0.2000000!3d48.0077420!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e28aa5f0bb9745%3A0x8b71e7a5b8c4e3a0!2sLe%20Mans%2C%20France!5e0!3m2!1sfr!2sfr!4v1726490000002!5m2!1sfr!2sfr"
+                      width="100%" height="100%" style="border:0; border-radius: 12px;" allowfullscreen=""
+                      loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Localisation - Le Mans, France">
                     </iframe>
                   </div>
                 </div>
@@ -193,6 +194,14 @@
             <div class="col-lg-6" data-aos="fade-left">
               <div class="location-info">
                 <h3 class="h4 mb-3 text-light">Disponibilités</h3>
+
+                <div class="availability-item d-flex align-items-center mb-3">
+                  <div class="availability-dot available"></div>
+                  <div>
+                    <h4 class="h6 mb-0 text-light">Alternance</h4>
+                    <p class="text-secondary mb-0">Rentrée 2026</p>
+                  </div>
+                </div>
                 <div class="availability-item d-flex align-items-center mb-3">
                   <div class="availability-dot unavailable"></div>
                   <div>
@@ -200,13 +209,7 @@
                     <p class="text-secondary mb-0">Stage déjà trouvé pour 2025</p>
                   </div>
                 </div>
-                <div class="availability-item d-flex align-items-center mb-3">
-                  <div class="availability-dot available"></div>
-                  <div>
-                    <h4 class="h6 mb-0 text-light">Alternance</h4>
-                    <p class="text-secondary mb-0">Rentrée 2025 - 2 ans</p>
-                  </div>
-                </div>
+
                 <div class="availability-item d-flex align-items-center">
                   <div class="availability-dot limited"></div>
                   <div>
@@ -222,7 +225,7 @@
                     <span class="location-tag">Le Mans</span>
                     <span class="location-tag">Angers</span>
                     <span class="location-tag">Nantes</span>
-                    <span class="location-tag">Remote</span>
+                    <span class="location-tag">Télétravail</span>
                   </div>
                 </div>
               </div>
@@ -277,13 +280,16 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#faq3" aria-expanded="false" aria-controls="faq3">
-                  <i class="bi bi-code-slash me-2"></i>Quelle est votre stack technique préférée ?
+                  <i class="bi bi-code-slash me-2"></i>Combien de temps t’a pris l’apprentissage de ton premier langage
+                  ?
                 </button>
               </h3>
               <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Pour le web, j'apprécie particulièrement travailler avec HTML/CSS, JavaScript et PHP/MySQL. Je suis
-                  également ouvert à l'apprentissage de nouveaux frameworks et technologies selon les besoins du projet.
+                  L’apprentissage de mon premier langage a été progressif. J’ai commencé par les bases, ce qui m’a pris
+                  quelques semaines à maîtriser confortablement. Ensuite, en pratiquant régulièrement sur de petits
+                  projets personnels et exercices, j’ai vraiment gagné en fluidité au bout de quelques mois. Selon moi,
+                  la clé n’est pas seulement le temps passé, mais la régularité et la pratique sur des projets concrets.
                 </div>
               </div>
             </div>
@@ -292,13 +298,16 @@
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
                   data-bs-target="#faq4" aria-expanded="false" aria-controls="faq4">
-                  <i class="bi bi-chat-dots me-2"></i>Proposez-vous des consultations gratuites ?
+                  <i class="bi bi-chat-dots me-2"></i>Comment apprends-tu un nouveau langage ou framework ?
                 </button>
               </h3>
               <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
                 <div class="accordion-body">
-                  Oui, je propose une première consultation gratuite de 30 minutes pour discuter de votre projet,
-                  comprendre vos besoins et déterminer si je suis la bonne personne pour vous aider.
+                  J’aime commencer par la documentation officielle pour comprendre les bases et les bonnes pratiques.
+                  Ensuite, je mets rapidement en pratique ce que j’apprends à travers de petits projets concrets. Je
+                  complète avec des tutos, des articles techniques ou des vidéos pour explorer différents points de vue.
+                  Enfin, je me challenge en intégrant ce langage ou framework dans un projet plus ambitieux afin de
+                  solidifier mes compétences.
                 </div>
               </div>
             </div>
@@ -336,7 +345,7 @@
           </div>
           <div class="col-lg-5 text-lg-end">
             <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
-              <a class="btn btn-outline-light btn-animated" href="#accueil"><i class="bi bi-arrow-up"></i> Haut de
+              <a class="btn btn-outline-light btn-animated" href="#contact-hero"><i class="bi bi-arrow-up"></i> Haut de
                 page</a>
               <a class="btn btn-primary btn-animated" href="#"><i class="bi bi-chat-dots"></i> Me contacter</a>
             </div>
@@ -354,7 +363,7 @@
       <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
         <span>© <span id="year"></span> Thomas Dumont</span>
         <span class="links d-flex gap-3">
-          <a href="#">Accueil</a>
+          <a href="../index.html#accueil">Accueil</a>
           <a href="#">Projets</a>
           <a href="#">Certifications</a>
           <a href="#">Veille technologique</a>
