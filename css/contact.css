@@ -128,31 +128,18 @@
 .map-placeholder {
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(19, 28, 59, 0.7), rgba(10, 15, 31, 0.7));
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: relative;
 }
 
-.map-content {
-  text-align: center;
-  z-index: 2;
+.map-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
-.map-content i {
-  font-size: 48px;
-  color: var(--brand-primary);
-  margin-bottom: 15px;
-}
-
-.map-content h4 {
-  color: #fff;
-  margin-bottom: 5px;
-}
-
-.map-content p {
-  color: #b7c2e0;
+/* Hide the placeholder content when iframe is active */
+.map-placeholder:has(iframe) .map-content {
+  display: none;
 }
 
 .location-info {
@@ -179,6 +166,11 @@
   box-shadow: 0 0 0 3px rgba(81, 207, 102, 0.3);
 }
 
+.availability-dot.unavailable {
+  background: #ff6b6b;
+  box-shadow: 0 0 0 3px rgba(255, 107, 107, 0.3);
+}
+
 .availability-dot.limited {
   background: #fcc419;
   box-shadow: 0 0 0 3px rgba(252, 196, 25, 0.3);
@@ -194,90 +186,53 @@
   color: #e9eef7;
 }
 
-/* Contact Form */
-.form-card {
+/* FAQ Accordion */
+.faq-accordion .accordion-item {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
-  border-radius: 16px;
-  overflow: hidden;
-}
-
-.form-label {
-  color: #e9eef7;
-  font-weight: 500;
-  margin-bottom: 8px;
-}
-
-.form-control, .form-select {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  color: #e9eef7;
-  padding: 12px 16px;
   border-radius: 12px;
+  margin-bottom: 16px;
+  overflow: hidden;
   transition: all 0.3s ease;
 }
 
-.form-control:focus, .form-select:focus {
-  background: rgba(255, 255, 255, 0.12);
-  border-color: var(--brand-primary);
-  color: #fff;
-  box-shadow: 0 0 0 0.25rem rgba(91, 141, 239, 0.25);
+.faq-accordion .accordion-item:hover {
+  border-color: rgba(91, 141, 239, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
-.form-control::placeholder {
-  color: #b7c2e0;
-}
-
-.form-check-input {
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-.form-check-input:checked {
-  background-color: var(--brand-primary);
-  border-color: var(--brand-primary);
-}
-
-.form-check-input:focus {
-  border-color: var(--brand-primary);
-  box-shadow: 0 0 0 0.25rem rgba(91, 141, 239, 0.25);
-}
-
-.form-check-label {
+.faq-accordion .accordion-button {
+  background: rgba(255, 255, 255, 0.08);
   color: #e9eef7;
-}
-
-/* FAQ Accordion */
-.accordion-button {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  color: #e9eef7;
-  padding: 16px 20px;
-  border-radius: 12px;
+  padding: 20px;
   font-weight: 500;
+  border: none;
+  transition: all 0.3s ease;
 }
 
-.accordion-button:not(.collapsed) {
+.faq-accordion .accordion-button:not(.collapsed) {
   background: rgba(91, 141, 239, 0.15);
   color: #fff;
-  border-color: rgba(91, 141, 239, 0.3);
   box-shadow: none;
 }
 
-.accordion-button::after {
+.faq-accordion .accordion-button::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23e9eef7'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transition: transform 0.3s ease;
 }
 
-.accordion-button:not(.collapsed)::after {
+.faq-accordion .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transform: rotate(-180deg);
 }
 
-.accordion-body {
+.faq-accordion .accordion-body {
   background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-top: none;
-  border-radius: 0 0 12px 12px;
   color: #e9eef7;
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  line-height: 1.6;
 }
 
 /* Animations */
@@ -320,5 +275,14 @@
   .map-container {
     height: 250px;
     margin-bottom: 30px;
+  }
+  
+  .faq-accordion .accordion-button {
+    padding: 16px;
+    font-size: 0.95rem;
+  }
+  
+  .faq-accordion .accordion-body {
+    padding: 16px;
   }
 }
