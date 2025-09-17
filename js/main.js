@@ -52,25 +52,16 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  // Ink bar logic
-  const navInk = document.getElementById('navInk');
-  const navEl = document.getElementById('mainNav');
-  function moveInkTo(el) {
-    if (!navInk || !el) return;
-    const rect = el.getBoundingClientRect();
-    const containerRect = navEl.querySelector('.container').getBoundingClientRect();
-    navInk.style.width = rect.width + 'px';
-    navInk.style.left = rect.left - containerRect.left + 'px';
-  }
-
-  const navLinks = Array.from(document.querySelectorAll('#mainNav .nav-item-link, #mainNav .dropdown-item, #mainNav .nav-link'));
   // Active state by URL
   const currentPath = location.pathname.split('/').pop() || 'index.html';
+  const navLinks = Array.from(document.querySelectorAll('#mainNav .nav-item-link, #mainNav .dropdown-item, #mainNav .nav-link'));
+  
   navLinks.forEach((link) => {
     const href = link.getAttribute('href');
     if (!href) return;
     const file = href.split('#')[0];
     const isIndex = (currentPath === '' || currentPath === 'index.html') && (file === '' || file === 'index.html' || href.includes('#accueil'));
+    
     if (isIndex || currentPath === file) {
       if (link.classList.contains('dropdown-item')) {
         link.classList.add('active');
@@ -79,23 +70,6 @@ document.addEventListener('DOMContentLoaded', function () {
       } else {
         link.classList.add('active');
       }
-      moveInkTo(link);
     }
-    // Hover move
-    link.addEventListener('mouseenter', () => { moveInkTo(link); });
   });
-  // Return ink to active on leave container
-  const navContainer = document.querySelector('#mainNav .container');
-  function resetInkToActive() {
-    const active = document.querySelector('#mainNav .nav-link.active, #mainNav .nav-item-link.active');
-    if (active) moveInkTo(active);
-    else {
-      const first = document.querySelector('#mainNav .nav-item-link, #mainNav .nav-link');
-      if (first) moveInkTo(first);
-    }
-  }
-  navContainer?.addEventListener('mouseleave', resetInkToActive);
-  // Also reset on resize (handles mobile collapse)
-  window.addEventListener('resize', resetInkToActive);
-  resetInkToActive();
 });
