@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mes Projets - Thomas Dumont</title>
+  <meta name="description"
+    content="Découvrez les projets de Thomas Dumont, étudiant en BTS SIO SLAM spécialisé en développement web et applications." />
+  <meta name="author" content="Thomas Dumont" />
+  <meta property="og:title" content="Mes Projets - Thomas Dumont" />
+  <meta property="og:description" content="Portfolio des projets de développement de Thomas Dumont." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="fr_FR" />
+  <link rel="icon" href="../assets/img/favicon.png" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- CSS Libraries -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link href="../css/styles.css" rel="stylesheet" />
+  <link href="../css/projets.css" rel="stylesheet" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+  <!-- Navbar -->
+  <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
+    <div class="container d-flex align-items-center justify-content-between">
+      <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
+
+      <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+        <div class="nav-shell">
+          <ul class="nav-menu">
+            <li><a class="nav-item-link" href="../index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a>
+            </li>
+            <li><a class="nav-item-link active" href="#"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
+            <li class="dropdown">
+              <a class="nav-item-link dropdown-toggle" href="#" id="btsDropdown" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"><i class="bi bi-mortarboard me-1"></i>BTS SIO <i
+                  class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i></a>
+              <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item" href="#">Présentation</a></li>
+                <li><a class="dropdown-item" href="#">Veille technologique</a></li>
+                <li><a class="dropdown-item" href="#">Tableau de compétences</a></li>
+              </ul>
+            </li>
+            <li><a class="nav-item-link cta btn-animated" href="contact.html"><i
+                  class="bi bi-envelope me-1"></i>Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Projets -->
+  <header id="projets-hero" class="projets-hero d-flex align-items-center">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="50">
+          <span class="badge rounded-pill text-bg-dark-subtle border border-secondary-subtle px-3 py-2">Portfolio de développement</span>
+          <h1 class="display-4 fw-bold mt-3">Mes réalisations</h1>
+          <p class="lead text-secondary">Découvrez une sélection de mes projets personnels et académiques en développement web et applications.</p>
+          <div class="d-flex gap-2 flex-wrap mt-3">
+            <a href="#projets-grid" class="btn btn-primary btn-lg btn-animated"><i class="bi bi-grid me-2"></i>Voir les projets</a>
+            <a href="../index.html#competences" class="btn btn-outline-light btn-lg btn-animated"><i
+                class="bi bi-stars me-2"></i>Mes compétences</a>
+          </div>
+        </div>
+        <div class="col-12 col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="150">
+          <div class="projets-card hero-card shadow-lg">
+            <div class="glow"></div>
+            <div class="p-4">
+              <div class="avatar mb-3">
+                <i class="bi bi-code-square"></i>
+              </div>
+              <h2 class="h4 mb-1">Développement & Création</h2>
+              <p class="text-secondary small mb-0">Web • Applications • Bases de données</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wave"></div>
+  </header>
+
+  <!-- Section Filtres -->
+  <section id="filtres" class="section-padding bg-body-tertiary">
+    <div class="container">
+      <div class="row justify-content-center" data-aos="fade-up">
+        <div class="col-lg-10">
+          <h2 class="section-title title-accent text-center">Explorez par catégorie</h2>
+          <p class="text-center text-secondary mb-4">Filtrez mes projets selon vos centres d'intérêt</p>
+          
+          <div class="d-flex justify-content-center flex-wrap gap-2" id="filtres-categories">
+            <button class="btn btn-filter active" data-filter="all">Tous</button>
+            <button class="btn btn-filter" data-filter="web">Développement Web</button>
+            <button class="btn btn-filter" data-filter="app">Applications</button>
+            <button class="btn btn-filter" data-filter="database">Bases de données</button>
+            <button class="btn btn-filter" data-filter="school">Projets académiques</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Grille de projets -->
+  <section id="projets-grid" class="section-padding">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+          <h2 class="section-title title-accent text-center">Mes projets</h2>
+          <p class="text-center text-secondary mb-5">Cliquez sur un projet pour en savoir plus</p>
+          
+          <div class="row g-4" id="grid-projets">
+            <!-- Projet 1 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="1">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-primary">Web</span>
+                    <span class="badge bg-secondary">School</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-globe"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Site vitrine DC Consult</h3>
+                  <p class="text-secondary small">Création d'un site vitrine responsive avec HTML, CSS et JavaScript.</p>
+                  <div class="technos">
+                    <span class="techno-tag">HTML</span>
+                    <span class="techno-tag">CSS</span>
+                    <span class="techno-tag">JS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projet 2 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50" data-category="app database">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="2">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-info">Application</span>
+                    <span class="badge bg-warning text-dark">BDD</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-database"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Gestionnaire de tâches</h3>
+                  <p class="text-secondary small">Application de gestion de tâches avec interface graphique Java et MySQL.</p>
+                  <div class="technos">
+                    <span class="techno-tag">Java</span>
+                    <span class="techno-tag">MySQL</span>
+                    <span class="techno-tag">Swing</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projet 3 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-category="web">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="3">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-primary">Web</span>
+                    <span class="badge bg-success">Frontend</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-layout-text-window"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Portfolio personnel</h3>
+                  <p class="text-secondary small">Conception et développement de mon portfolio avec animations modernes.</p>
+                  <div class="technos">
+                    <span class="techno-tag">HTML</span>
+                    <span class="techno-tag">CSS</span>
+                    <span class="techno-tag">JS</span>
+                    <span class="techno-tag">Bootstrap</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projet 4 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150" data-category="app school">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="4">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-info">Application</span>
+                    <span class="badge bg-secondary">School</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-calculator"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Calculatrice scientifique</h3>
+                  <p class="text-secondary small">Application console en C++ avec fonctions avancées et gestion d'erreurs.</p>
+                  <div class="technos">
+                    <span class="techno-tag">C++</span>
+                    <span class="techno-tag">POO</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projet 5 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-category="database web">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="5">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-warning text-dark">BDD</span>
+                    <span class="badge bg-primary">Web</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-server"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Sistema de gestion</h3>
+                  <p class="text-secondary small">Système de gestion avec interface web et base de données relationnelle.</p>
+                  <div class="technos">
+                    <span class="techno-tag">PHP</span>
+                    <span class="techno-tag">MySQL</span>
+                    <span class="techno-tag">Bootstrap</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Projet 6 -->
+            <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250" data-category="web">
+              <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="6">
+                <div class="card-img-top projet-image">
+                  <div class="projet-badges">
+                    <span class="badge bg-primary">Web</span>
+                    <span class="badge bg-success">API</span>
+                  </div>
+                  <div class="image-placeholder">
+                    <i class="bi bi-cloud"></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <h3 class="h5 mb-2">Application météo</h3>
+                  <p class="text-secondary small">Application web utilisant une API météo avec affichage dynamique.</p>
+                  <div class="technos">
+                    <span class="techno-tag">JavaScript</span>
+                    <span class="techno-tag">API REST</span>
+                    <span class="techno-tag">CSS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal pour les détails du projet -->
+  <div class="modal fade" id="projetModal" tabindex="-1" aria-labelledby="projetModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header border-0 pb-0">
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body p-4 pt-0" id="modal-projet-content">
+          <!-- Le contenu sera chargé dynamiquement par JavaScript -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer id="contact" class="section-padding footer text-light footer-neo">
+    <div class="footer-canvas" aria-hidden="true">
+      <span class="stripe s1"></span>
+      <span class="stripe s2"></span>
+      <span class="stripe s3"></span>
+      <span class="dots"></span>
+    </div>
+    <div class="container position-relative">
+      <div class="glass-panel">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-7">
+            <div class="brandline d-flex align-items-center gap-3 mb-2">
+              <span class="mark">TD</span>
+              <div>
+                <div class="who">Thomas Dumont</div>
+                <div class="role">Développement web • Applications</div>
+              </div>
+            </div>
+            <div class="contacts d-flex flex-column gap-2">
+              <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73 86</a>
+              <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i class="bi bi-envelope"></i>
+                thomas.dumont1806@gmail.com</a>
+              <span class="contact-link"><i class="bi bi-geo-alt"></i> Cholet • Le Mans</span>
+            </div>
+          </div>
+          <div class="col-lg-5 text-lg-end">
+            <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+              <a class="btn btn-outline-light btn-animated" href="#projets-hero"><i class="bi bi-arrow-up"></i> Haut de
+                page</a>
+              <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i> Me contacter</a>
+            </div>
+            <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+              <a class="icon" href="https://github.com/dootod" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  class="bi bi-github"></i></a>
+              <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank" rel="noopener"
+                aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i
+                  class="bi bi-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+        <span>© <span id="year"></span> Thomas Dumont</span>
+        <span class="links d-flex gap-3">
+          <a href="../index.html#accueil">Accueil</a>
+          <a href="#">Projets</a>
+          <a href="#">Présentation</a>
+          <a href="#">Veille technologique</a>
+          <a href="#">Tableau de compétences</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  
+  <!-- Données des projets -->
+  <script>
+    // Données des projets (facilement extensible)
+    const projetsData = {
+      1: {
+        titre: "Site vitrine DC Consult",
+        categorie: ["Web", "Projet académique"],
+        description: "Création complète d'un site vitrine responsive pour une entreprise de conseil. Le site présente les services de l'entreprise, son équipe et permet aux clients potentiels de prendre contact.",
+        details: `
+          <p>Dans le cadre de mon stage, j'ai conçu et développé un site vitrine pour DC Consult, une entreprise spécialisée dans le conseil aux entreprises.</p>
+          <p><strong>Fonctionnalités principales :</strong></p>
+          <ul>
+            <li>Design responsive s'adaptant à tous les appareils</li>
+            <li>Présentation des services de l'entreprise</li>
+            <li>Page de contact avec formulaire fonctionnel</li>
+            <li>Optimisation SEO pour une meilleure visibilité</li>
+            <li>Intégration d'un système de gestion de contenu simple</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript, PHP, MySQL</p>
+          <p>Ce projet m'a permis de consolider mes compétences en développement front-end et de comprendre les besoins clients dans un contexte professionnel.</p>
+        `,
+        technos: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
+        date: "Mai-Juin 2024",
+        contexte: "Stage en entreprise",
+        images: []
+      },
+      2: {
+        titre: "Gestionnaire de tâches",
+        categorie: ["Application", "Base de données"],
+        description: "Application desktop de gestion de tâches permettant de créer, organiser et suivre l'avancement de projets personnels ou professionnels.",
+        details: `
+          <p>Application développée en Java avec interface Swing pour la gestion de tâches quotidiennes et projets.</p>
+          <p><strong>Fonctionnalités principales :</strong></p>
+          <ul>
+            <li>Création, modification et suppression de tâches</li>
+            <li>Catégorisation par projets et priorités</li>
+            <li>Dates d'échéance et rappels</li>
+            <li>Statistiques d'avancement</li>
+            <li>Sauvegarde et restauration des données</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> Java, Swing, MySQL, JDBC</p>
+          <p>Ce projet m'a permis d'approfondir mes connaissances en programmation orientée objet et en gestion de bases de données relationnelles.</p>
+        `,
+        technos: ["Java", "Swing", "MySQL", "JDBC"],
+        date: "Janvier 2024",
+        contexte: "Projet personnel",
+        images: []
+      },
+      3: {
+        titre: "Portfolio personnel",
+        categorie: ["Web"],
+        description: "Conception et développement de mon portfolio en ligne mettant en avant mes compétences, mon parcours et mes réalisations.",
+        details: `
+          <p>Réalisation d'un site portfolio responsive avec des animations modernes et une interface utilisateur intuitive.</p>
+          <p><strong>Caractéristiques :</strong></p>
+          <ul>
+            <li>Design moderne avec effets glassmorphism et néomorphism</li>
+            <li>Sections présentant mon parcours, compétences et projets</li>
+            <li>Animations fluides et transitions élégantes</li>
+            <li>Formulaire de contact fonctionnel</li>
+            <li>Optimisation des performances et accessibilité</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript, Bootstrap, AOS.js</p>
+          <p>Ce projet m'a permis d'explorer les dernières tendances en design web et d'améliorer mes compétences en développement front-end.</p>
+        `,
+        technos: ["HTML", "CSS", "JavaScript", "Bootstrap", "AOS.js"],
+        date: "Février 2024 - Présent",
+        contexte: "Projet personnel",
+        images: []
+      },
+      4: {
+        titre: "Calculatrice scientifique",
+        categorie: ["Application", "Projet académique"],
+        description: "Application console en C++ offrant des fonctions avancées de calcul scientifique et une gestion robuste des erreurs.",
+        details: `
+          <p>Développement d'une calculatrice scientifique en C++ avec interface en ligne de commande.</p>
+          <p><strong>Fonctionnalités principales :</strong></p>
+          <ul>
+            <li>Opérations arithmétiques de base</li>
+            <li>Fonctions scientifiques (sinus, cosinus, tangente, logarithme, exponentielle, etc.)</li>
+            <li>Gestion des parenthèses et priorité des opérations</li>
+            <li>Historique des calculs</li>
+            <li>Gestion robuste des erreurs et des exceptions</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> C++, Programmation Orientée Objet</p>
+          <p>Ce projet académique m'a permis de maîtriser les concepts avancés de la programmation en C++ et la gestion d'expressions mathématiques complexes.</p>
+        `,
+        technos: ["C++", "POO"],
+        date: "Novembre 2023",
+        contexte: "Projet académique",
+        images: []
+      },
+      5: {
+        titre: "Sistema de gestion",
+        categorie: ["Base de données", "Web"],
+        description: "Système complet de gestion avec interface web permettant la gestion de clients, produits et commandes.",
+        details: `
+          <p>Développement d'un système de gestion complet avec interface web et base de données relationnelle.</p>
+          <p><strong>Fonctionnalités principales :</strong></p>
+          <ul>
+            <li>Gestion des clients (ajout, modification, suppression)</li>
+            <li>Gestion des produits et catalogue</li>
+            <li>Suivi des commandes et facturation</li>
+            <li>Tableau de bord avec statistiques</li>
+            <li>Interface d'administration sécurisée</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> PHP, MySQL, HTML, CSS, JavaScript, Bootstrap</p>
+          <p>Ce projet m'a permis de comprendre les défis du développement full-stack et de concevoir une architecture applicative robuste.</p>
+        `,
+        technos: ["PHP", "MySQL", "HTML", "CSS", "JavaScript", "Bootstrap"],
+        date: "Mars 2024",
+        contexte: "Projet académique",
+        images: []
+      },
+      6: {
+        titre: "Application météo",
+        categorie: ["Web"],
+        description: "Application web responsive utilisant une API météo pour afficher les prévisions actuelles et futures.",
+        details: `
+          <p>Création d'une application web qui consomme une API météo pour afficher les conditions actuelles et les prévisions.</p>
+          <p><strong>Fonctionnalités principales :</strong></p>
+          <ul>
+            <li>Recherche par ville ou localisation automatique</li>
+            <li>Affichage des conditions météo actuelles</li>
+            <li>Prévisions sur 5 jours avec données horaires</li>
+            <liInterface responsive et intuitive</li>
+            <li>Stockage local des villes favorites</li>
+          </ul>
+          <p><strong>Technologies utilisées :</strong> JavaScript, API REST, HTML5, CSS3, LocalStorage</p>
+          <p>Ce projet m'a permis de me familiariser avec l'intégration d'API externes et la manipulation de données JSON en JavaScript.</p>
+        `,
+        technos: ["JavaScript", "API REST", "HTML", "CSS", "LocalStorage"],
+        date: "Avril 2024",
+        contexte: "Projet personnel",
+        images: []
+      }
+    };
+  </script>
+  
+  <!-- Scripts personnalisés -->
+  <script src="../js/projets.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
+</html>
