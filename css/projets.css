@@ -202,3 +202,8 @@
     font-size: 0.9rem;
   }
 }
+
+.projet-card .card-body h3 {
+  color: #e9eef7 !important;
+  font-weight: 600;
+}
