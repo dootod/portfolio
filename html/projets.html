@@ -144,9 +144,7 @@
                                         <span class="badge bg-primary">Web</span>
                                         <span class="badge bg-secondary">School</span>
                                     </div>
-                                    <div class="image-placeholder">
-                                        <i class="bi bi-globe"></i>
-                                    </div>
+                                    <img src="../img/modal/1.png" alt="">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Site vitrine DC Consult</h3>
@@ -155,6 +153,28 @@
                                         <span class="techno-tag">HTML</span>
                                         <span class="techno-tag">CSS</span>
                                         <span class="techno-tag">JS</span>
+                                        <span class="techno-tag">PHP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 2 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
+                                data-bs-target="#projetModal" data-projet="2">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges">
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-secondary">School</span>
+                                    </div>
+                                    <img src="../img/modal/2.png" alt="">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Projet PPE1</h3>
+                                    <p class="text-secondary small">Création d'un site vitrine Wordpress pour une PME.</p>
+                                    <div class="technos">
+                                        <span class="techno-tag">Wordpress</span>
                                     </div>
                                 </div>
                             </div>
@@ -256,23 +276,53 @@
                 categorie: ["Web", "Projet académique"],
                 description: "Création complète d'un site vitrine responsive pour une entreprise de charpente métallique.",
                 details: `
-          <p>Dans le cadre de mon stage, j'ai conçu et développé un site vitrine pour DC Consult, une entreprise spécialisée dans la charpente métallique.</p>
-          <p><strong>Fonctionnalités principales :</strong></p>
-          <ul>
-            <li>Design responsive</li>
-            <li>Présentation des services de l'entreprise</li>
-            <li>Page de contact avec formulaire fonctionnel grâce a PHPMailer</li>
-          </ul>
-          <p><strong>Technologies utilisées :</strong> HTML5, CSS3, JavaScript</p>
-          <p>Ce projet m'a permis de consolider mes compétences en développement front-end et de comprendre les besoins clients dans un contexte professionnel.</p>
-          <a href="https://www.dc-consult-bet.fr/" target="_blank" class="btn btn-primary btn-animated custom-btn">
-            Lien du site vitrine
-          </a>
-        `,
-                technos: ["HTML", "CSS", "JavaScript"],
+                    <div class="modal-projet-img">
+                        <img src="../img/modal/1.png" alt="Image de l'index du site DC Consult" class="img-fluid rounded">
+                    </div>
+                    <p>Dans le cadre de mon stage, j'ai conçu et développé un site vitrine pour DC Consult, une entreprise spécialisée dans la charpente métallique.</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>Design responsive</li>
+                        <li>Présentation de l'enterprise et de ses services de l'entreprise</li>
+                        <li>Page de contact avec formulaire fonctionnel grâce a PHPMailer</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP</p>
+                    <p>Ce projet m'a permis de consolider mes compétences en développement front-end et de comprendre les besoins clients dans un contexte professionnel.</p>
+                    <a href="https://www.dc-consult-bet.fr/" target="_blank" class="btn btn-primary btn-animated me-2">
+                        <i class="bi bi-link me-2"></i>Voir le projet
+                    </a>
+                `,
+                technos: ["HTML", "CSS", "JavaScript", "PHP"],
                 date: "Mai-Juin 2025",
                 contexte: "Stage en entreprise",
                 images: []
+            },
+
+            2: {
+                titre: "Projet PPE1",
+                categorie: ["Web", "Projet académique"],
+                description: "Création en équipe du site vitrine de l'entreprise BST79 via le CMS Wordpress.",
+                details: `
+                    <div class="modal-projet-img">
+                        <img src="../img/modal/2.png" alt="Projet PPE1" class="img-fluid rounded">
+                    </div>
+                    <p>Dans le cadre de notre PPE1, nous avons mené ce Projet Professionnel Encadré (PPE) pour développer et renforcer nos compétences en conception et création de sites web. Ce projet nous a permis de mettre en pratique les connaissances acquises en cours, notamment grâce à l’utilisation du CMS WordPress, tout en apprenant à travailler efficacement en équipe. L’objectif principal était d’approfondir nos compétences techniques, organisationnelles et créatives en réalisant un projet concret et professionnel.
+</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>Présentation de l'enterprise et de ses produits et services</li>
+                        <li>Design responsive</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> Wordpress</p>
+                    <p>Ce projet de création d’un site vitrine sous WordPress m’a permis de développer mes compétences en travail d’équipe, en communication et en gestion de projet. J’ai également renforcé mes connaissances techniques dans l’utilisation de WordPress, la personnalisation de thèmes et la mise en ligne d’un site professionnel, tout en apprenant à collaborer efficacement pour atteindre des objectifs communs.</p>
+                    <a href="https://bst79.fr/" target="_blank" class="btn btn-primary btn-animated me-2">
+                        <i class="bi bi-link me-2"></i>Voir le projet
+                    </a>
+                `,
+                technos: ["Wordpress"],
+                date: "Novembre 2024 - Janvier 2025",
+                contexte: "Académique",
+                images: ["../img/modal/2.png"]
             },
         };
     </script>

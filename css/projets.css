@@ -207,3 +207,74 @@
   color: #e9eef7 !important;
   font-weight: 600;
 }
+
+/* Correction pour les images de projets */
+.projet-image {
+    position: relative;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.projet-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.projet-card:hover .projet-image img {
+    transform: scale(1.05);
+}
+
+/* Styles améliorés pour le modal */
+.modal-projet-img {
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.modal-projet-img img {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.modal-content {
+    background: rgba(19, 28, 59, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 16px;
+    backdrop-filter: blur(20px);
+}
+
+.modal-body {
+    color: #e9eef7;
+    line-height: 1.6;
+}
+
+.modal-body h2 {
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.modal-body p {
+    margin-bottom: 1rem;
+}
+
+.modal-body ul {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+}
+
+.modal-body ul li {
+    margin-bottom: 0.5rem;
+}
+
+.custom-btn {
+    margin-top: 1rem;
+}
