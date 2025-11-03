@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Présentation BTS SIO - Thomas Dumont</title>
+    <meta name="description"
+        content="Présentation du BTS SIO option SLAM - Solutions Logicielles et Applications Métiers" />
+    <meta name="author" content="Thomas Dumont" />
+    <meta property="og:title" content="Présentation BTS SIO - Thomas Dumont" />
+    <meta property="og:description" content="Découvrez le BTS SIO option SLAM et ses débouchés professionnels." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="icon" href="../assets/img/favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/presentation.css" rel="stylesheet" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
+
+            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <div class="nav-shell">
+                    <ul class="nav-menu">
+                        <li><a class="nav-item-link" href="../index.html#accueil"><i
+                                    class="bi bi-house-door me-1"></i>Accueil</a>
+                        </li>
+                        <li><a class="nav-item-link" href="projets.html"><i class="bi bi-kanban me-1"></i>Mes projets</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-item-link dropdown-toggle active" href="#" id="btsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><i
+                                    class="bi bi-mortarboard me-1"></i>BTS SIO <i
+                                    class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item active" href="presentation.html">Présentation</a></li>
+                                <li><a class="dropdown-item" href="#">Veille technologique</a></li>
+                                <li><a class="dropdown-item" href="#">Tableau de compétences</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-item-link cta btn-animated" href="contact.html"><i
+                                    class="bi bi-envelope me-1"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Présentation -->
+    <header id="presentation-hero" class="presentation-hero d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="50">
+                    <span class="badge rounded-pill text-bg-dark-subtle border border-secondary-subtle px-3 py-2">BTS
+                        SIO - Option SLAM</span>
+                    <h1 class="display-4 fw-bold mt-3">Présentation du BTS SIO</h1>
+                    <p class="lead text-secondary">Découvrez la formation qui me prépare aux métiers du développement
+                        logiciel et des applications métiers.</p>
+                    <div class="d-flex gap-2 flex-wrap mt-3">
+                        <a href="#presentation-generale" class="btn btn-primary btn-lg btn-animated"><i
+                                class="bi bi-info-circle me-2"></i>Découvrir la formation</a>
+                        <a href="#competences" class="btn btn-outline-light btn-lg btn-animated"><i
+                                class="bi bi-stars me-2"></i>Compétences acquises</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="presentation-card hero-card shadow-lg">
+                        <div class="glow"></div>
+                        <div class="p-4">
+                            <div class="avatar mb-3">
+                                <i class="bi bi-mortarboard"></i>
+                            </div>
+                            <h2 class="h4 mb-1">BTS SIO SLAM</h2>
+                            <p class="text-secondary small mb-0">Solutions Logicielles et Applications Métiers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </header>
+
+    <!-- Section Présentation Générale -->
+    <section id="presentation-generale" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">BTS SIO — Option SLAM</h2>
+                    <p class="text-center text-secondary mb-5">Solutions Logicielles et Applications Métiers</p>
+
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <h3 class="h4 mb-4">Présentation générale</h3>
+                            <p class="fs-5 mb-4">Le <strong>BTS Services Informatiques aux Organisations (SIO)</strong>
+                                est un diplôme national de niveau Bac +2, reconnu par l'État. Il forme des spécialistes
+                                capables de concevoir, développer et maintenir des solutions informatiques adaptées aux
+                                besoins des entreprises et des organisations.</p>
+
+                            <div class="row g-4 mt-4">
+                                <div class="col-md-6" data-aos="fade-right">
+                                    <div class="option-card card h-100 border-0">
+                                        <div class="card-body text-center p-4">
+                                            <div class="option-icon bg-primary">
+                                                <i class="bi bi-server"></i>
+                                            </div>
+                                            <h4 class="h5 mt-3 mb-2">SISR</h4>
+                                            <p class="text-secondary mb-0">Solutions d'Infrastructure, Systèmes et
+                                                Réseaux</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-left">
+                                    <div class="option-card card h-100 border-0 active">
+                                        <div class="card-body text-center p-4">
+                                            <div class="option-icon bg-success">
+                                                <i class="bi bi-code-slash"></i>
+                                            </div>
+                                            <h4 class="h5 mt-3 mb-2">SLAM</h4>
+                                            <p class="text-light mb-0"><strong>Solutions Logicielles et Applications
+                                                    Métiers</strong></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Option SLAM -->
+    <section id="option-slam" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">L'option SLAM en détail</h2>
+                    <p class="text-center text-secondary mb-5">La spécialité que j'ai choisie</p>
+
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <p class="fs-5 mb-4">L'option SLAM met l'accent sur le développement logiciel et la
+                                programmation. Elle forme des professionnels capables de :</p>
+
+                            <div class="row g-4">
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="50">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-search"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Analyser les besoins</h4>
+                                            <p class="text-secondary mb-0">Comprendre les exigences d'un client ou d'une
+                                                entreprise</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-layout-wtf"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Concevoir des applications</h4>
+                                            <p class="text-secondary mb-0">Web, mobile ou de bureau adaptées aux besoins
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-cpu"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Développer des solutions</h4>
+                                            <p class="text-secondary mb-0">Performantes, sécurisées et maintenables</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-database"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Gérer les bases de données</h4>
+                                            <p class="text-secondary mb-0">Et les interactions front-end / back-end</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="250">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-tools"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Maintenir et faire évoluer</h4>
+                                            <p class="text-secondary mb-0">Les applications existantes</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-up" data-aos-delay="300">
+                                    <div class="competence-item d-flex align-items-start">
+                                        <div class="competence-icon me-3">
+                                            <i class="bi bi-people"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h6 mb-2">Travailler en équipe</h4>
+                                            <p class="text-secondary mb-0">Avec des méthodes agiles et collaboratives
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences Acquises -->
+    <section id="competences" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Compétences acquises</h2>
+                    <p class="text-center text-secondary mb-5">Ce que j'apprends pendant les deux années de formation
+                    </p>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="50">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-file-code"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Programmation</h4>
+                                    <p class="text-secondary">PHP, Java, Python, JavaScript, SQL et bien d'autres
+                                        langages</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-diagram-3"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Bases de données</h4>
+                                    <p class="text-secondary">Modélisation, conception et gestion avec MySQL,
+                                        PostgreSQL</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-puzzle"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Frameworks</h4>
+                                    <p class="text-secondary">Utilisation de frameworks modernes comme Laravel, Symfony,
+                                        React</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-kanban"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Gestion de projet</h4>
+                                    <p class="text-secondary">Cycle de vie complet, de la conception à la mise en
+                                        production</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="250">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-git"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Versionning</h4>
+                                    <p class="text-secondary">Collaboration avec Git/GitHub et gestion de versions</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-4" data-aos="zoom-in" data-aos-delay="300">
+                            <div class="skill-acquired-card card h-100 border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="skill-icon mb-3">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <h4 class="h5 mb-3">Sécurité</h4>
+                                    <p class="text-secondary">Sécurisation des applications et protection des données
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Projets et Pratique -->
+    <section id="projets-pratique" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Projets et pratique</h2>
+                    <p class="text-center text-secondary mb-5">Une formation orientée vers la pratique professionnelle
+                    </p>
+
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="row g-4">
+                                <div class="col-md-6" data-aos="fade-right">
+                                    <div class="practice-item">
+                                        <div class="practice-icon">
+                                            <i class="bi bi-laptop"></i>
+                                        </div>
+                                        <div class="practice-content">
+                                            <h4 class="h5 mb-2">Projets concrets</h4>
+                                            <p class="text-secondary mb-0">Réalisation de sites web, applications
+                                                métiers, et outils internes pour de vrais clients</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-left">
+                                    <div class="practice-item">
+                                        <div class="practice-icon">
+                                            <i class="bi bi-briefcase"></i>
+                                        </div>
+                                        <div class="practice-content">
+                                            <h4 class="h5 mb-2">Stages en entreprise</h4>
+                                            <p class="text-secondary mb-0">10 à 12 semaines de stage ou alternance pour
+                                                une immersion professionnelle</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-right">
+                                    <div class="practice-item">
+                                        <div class="practice-icon">
+                                            <i class="bi bi-clipboard-check"></i>
+                                        </div>
+                                        <div class="practice-content">
+                                            <h4 class="h5 mb-2">Projets tutorés</h4>
+                                            <p class="text-secondary mb-0">Mise en situation professionnelle avec suivi
+                                                et évaluation par des experts</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6" data-aos="fade-left">
+                                    <div class="practice-item">
+                                        <div class="practice-icon">
+                                            <i class="bi bi-file-earmark-text"></i>
+                                        </div>
+                                        <div class="practice-content">
+                                            <h4 class="h5 mb-2">Livrables professionnels</h4>
+                                            <p class="text-secondary mb-0">Gestion complète de projets avec
+                                                documentation et livrables conformes aux standards</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Débouchés -->
+    <section id="debouches" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Débouchés après le BTS</h2>
+                    <p class="text-center text-secondary mb-5">Les perspectives après l'obtention du diplôme</p>
+
+                    <div class="row g-4">
+                        <div class="col-lg-6" data-aos="fade-right">
+                            <div class="card shadow-sm border-0 strong-contrast h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="h4 mb-4">💼 Poursuites d'études</h3>
+                                    <div class="study-path">
+                                        <div class="path-item d-flex align-items-center mb-3">
+                                            <div class="path-icon me-3">
+                                                <i class="bi bi-journal-text"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h6 mb-1">Licence Professionnelle</h4>
+                                                <p class="text-secondary mb-0">Développement, cybersécurité, systèmes
+                                                    d'information</p>
+                                            </div>
+                                        </div>
+                                        <div class="path-item d-flex align-items-center mb-3">
+                                            <div class="path-icon me-3">
+                                                <i class="bi bi-mortarboard"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h6 mb-1">Formation d'ingénieur</h4>
+                                                <p class="text-secondary mb-0">Écoles d'ingénieurs en informatique</p>
+                                            </div>
+                                        </div>
+                                        <div class="path-item d-flex align-items-center">
+                                            <div class="path-icon me-3">
+                                                <i class="bi bi-layers"></i>
+                                            </div>
+                                            <div>
+                                                <h4 class="h6 mb-1">Bachelor</h4>
+                                                <p class="text-secondary mb-0">Développement Web / Full Stack</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6" data-aos="fade-left">
+                            <div class="card shadow-sm border-0 strong-contrast h-100">
+                                <div class="card-body p-4">
+                                    <h3 class="h4 mb-4">🚀 Métiers possibles</h3>
+                                    <div class="jobs-grid">
+                                        <span class="job-tag">Développeur d'applications</span>
+                                        <span class="job-tag">Développeur web</span>
+                                        <span class="job-tag">Développeur mobile</span>
+                                        <span class="job-tag">Intégrateur web</span>
+                                        <span class="job-tag">Analyste programmeur</span>
+                                        <span class="job-tag">Technicien d'études informatiques</span>
+                                        <span class="job-tag">Assistant chef de projet</span>
+                                        <span class="job-tag">Administrateur de bases de données</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Informations Pratiques -->
+    <section id="infos-pratiques" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-8">
+                    <h2 class="section-title title-accent text-center">Informations pratiques</h2>
+                    <p class="text-center text-secondary mb-5">Organisation de la formation</p>
+
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="row g-4 text-center">
+                                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
+                                    <div class="info-item">
+                                        <div class="info-icon mb-3">
+                                            <i class="bi bi-clock"></i>
+                                        </div>
+                                        <h4 class="h5 mb-2">Durée</h4>
+                                        <p class="text-secondary mb-0">2 ans</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+                                    <div class="info-item">
+                                        <div class="info-icon mb-3">
+                                            <i class="bi bi-briefcase"></i>
+                                        </div>
+                                        <h4 class="h5 mb-2">Stage</h4>
+                                        <p class="text-secondary mb-0">10 à 12 semaines en formation initiale</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4" data-aos="zoom-in" data-aos-delay="250">
+                                    <div class="info-item">
+                                        <div class="info-icon mb-3">
+                                            <i class="bi bi-building"></i>
+                                        </div>
+                                        <h4 class="h5 mb-2">Alternance</h4>
+                                        <p class="text-secondary mb-0">Possible selon les établissements</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="text-center mt-4" data-aos="fade-up">
+                                <p class="text-secondary mb-0">
+                                    <strong>Diplôme délivré par :</strong> Ministère de l'Éducation nationale
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="section-padding footer text-light footer-neo">
+        <div class="footer-canvas" aria-hidden="true">
+            <span class="stripe s1"></span>
+            <span class="stripe s2"></span>
+            <span class="stripe s3"></span>
+            <span class="dots"></span>
+        </div>
+        <div class="container position-relative">
+            <div class="glass-panel">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="brandline d-flex align-items-center gap-3 mb-2">
+                            <span class="mark">TD</span>
+                            <div>
+                                <div class="who">Thomas Dumont</div>
+                                <div class="role">Développement web • Applications</div>
+                            </div>
+                        </div>
+                        <div class="contacts d-flex flex-column gap-2">
+                            <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73
+                                86</a>
+                            <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i
+                                    class="bi bi-envelope"></i>
+                                thomas.dumont1806@gmail.com</a>
+                            <span class="contact-link"><i class="bi bi-geo-alt"></i> Cholet • Le Mans</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+                            <a class="btn btn-outline-light btn-animated" href="#presentation-hero"><i
+                                    class="bi bi-arrow-up"></i> Haut de
+                                page</a>
+                            <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i>
+                                Me contacter</a>
+                        </div>
+                        <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+                            <a class="icon" href="https://github.com/dootod" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank"
+                                rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i
+                                    class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+                <span>© <span id="year"></span> Thomas Dumont</span>
+                <span class="links d-flex gap-3">
+                    <a href="../index.html#accueil">Accueil</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="presentation.html">Présentation</a>
+                    <a href="#">Veille technologique</a>
+                    <a href="#">Tableau de compétences</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Scripts personnalisés -->
+    <script src="../js/main.js"></script>
+</body>
+
+</html>

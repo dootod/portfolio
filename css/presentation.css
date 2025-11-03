@@ -1,0 +1,358 @@
+/* Styles spécifiques à la page Présentation BTS SIO */
+
+/* Hero Présentation */
+.presentation-hero {
+  min-height: 85vh;
+  padding-top: 96px;
+}
+
+.presentation-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.presentation-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Cartes d'options */
+.option-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.option-card.active {
+  background: rgba(91, 141, 239, 0.15);
+  border-color: rgba(91, 141, 239, 0.4);
+  transform: translateY(-5px);
+}
+
+.option-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.option-icon.bg-primary {
+  background: rgba(91, 141, 239, 0.2);
+  border: 1px solid rgba(91, 141, 239, 0.4);
+}
+
+.option-icon.bg-success {
+  background: rgba(102, 217, 232, 0.2);
+  border: 1px solid rgba(102, 217, 232, 0.4);
+}
+
+/* Items de compétences */
+.competence-item {
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.competence-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(91, 141, 239, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.competence-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-primary);
+  flex-shrink: 0;
+}
+
+/* Cartes de compétences acquises */
+.skill-acquired-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.skill-acquired-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 141, 239, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--brand-primary);
+  transition: all 0.3s ease;
+}
+
+.skill-acquired-card:hover .skill-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+/* Items de pratique */
+.practice-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.practice-item:hover {
+  transform: translateY(-2px);
+  border-color: rgba(91, 141, 239, 0.4);
+}
+
+.practice-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-primary);
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+/* Chemins d'études */
+.path-item {
+  padding: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.path-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand-primary);
+  flex-shrink: 0;
+}
+
+/* Grille des métiers */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+}
+
+.job-tag {
+  display: inline-block;
+  padding: 8px 12px;
+  background: rgba(91, 141, 239, 0.15);
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  border-radius: 20px;
+  font-size: 0.85rem;
+  color: #e9eef7;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.job-tag:hover {
+  background: rgba(91, 141, 239, 0.25);
+  transform: translateY(-2px);
+}
+
+/* Items d'informations */
+.info-item {
+  padding: 20px;
+}
+
+.info-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--brand-primary);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(91, 141, 239, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0);
+  }
+}
+
+.presentation-card .glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(91, 141, 239, 0.2) 0%, rgba(91, 141, 239, 0) 70%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .presentation-hero {
+    min-height: auto;
+    padding: 80px 0 40px;
+  }
+
+  .presentation-card {
+    margin-top: 30px;
+  }
+
+  .practice-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .competence-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .competence-icon {
+    margin: 0 auto 10px;
+  }
+}
+
+/* Cartes de compétences acquises */
+.skill-acquired-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.skill-acquired-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 141, 239, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.skill-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--brand-primary);
+  transition: all 0.3s ease;
+}
+
+.skill-acquired-card:hover .skill-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+/* CORRECTION : Titres en blanc */
+.skill-acquired-card h4 {
+  color: #ffffff !important;
+}
+
+.skill-acquired-card h3,
+.skill-acquired-card h5,
+.skill-acquired-card h6 {
+  color: #ffffff !important;
+}
+
+/* Cartes d'options */
+.option-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.option-card.active {
+  background: rgba(91, 141, 239, 0.15);
+  border-color: rgba(91, 141, 239, 0.4);
+  transform: translateY(-5px);
+}
+
+.option-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: #fff;
+}
+
+.option-icon.bg-primary {
+  background: rgba(91, 141, 239, 0.2);
+  border: 1px solid rgba(91, 141, 239, 0.4);
+}
+
+.option-icon.bg-success {
+  background: rgba(102, 217, 232, 0.2);
+  border: 1px solid rgba(102, 217, 232, 0.4);
+}
+
+/* CORRECTION : Titres des cartes d'options en blanc */
+.option-card h4 {
+  color: #ffffff !important;
+}
+
+.option-card h3,
+.option-card h5,
+.option-card h6 {
+  color: #ffffff !important;
+}
+
+/* CORRECTION spécifique pour les titres SISR et SLAM */
+.option-card .card-body h4,
+.option-card .card-body h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
