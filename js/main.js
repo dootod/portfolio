@@ -22,35 +22,105 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
-  // Dropdown: open on hover for desktop, keep click on mobile
-  const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
+  // Gestion des dropdowns
   const dropdowns = document.querySelectorAll('.navbar .dropdown');
-  dropdowns.forEach((dd) => {
-    const toggle = dd.querySelector('[data-bs-toggle="dropdown"]');
-    const menu = dd.querySelector('.dropdown-menu');
-    if (!toggle || !menu) return;
+  const isDesktop = () => window.matchMedia('(min-width: 992px)').matches;
 
-    // Hover handlers
-    dd.addEventListener('mouseenter', () => {
-      if (!isDesktop()) return;
-      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
-      bsDropdown.show();
-    });
-    dd.addEventListener('mouseleave', () => {
-      if (!isDesktop()) return;
-      const bsDropdown = bootstrap.Dropdown.getOrCreateInstance(toggle);
-      bsDropdown.hide();
-    });
+  dropdowns.forEach((dropdown) => {
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (!toggle) return;
 
-    // Mobile: click-only, ensure chevron follows state
-    toggle.addEventListener('click', () => {
-      setTimeout(() => {
-        const expanded = toggle.getAttribute('aria-expanded') === 'true';
-        if (expanded) dd.classList.add('show');
-        else dd.classList.remove('show');
-      }, 0);
-    });
+    if (isDesktop()) {
+      // Sur desktop: hover seulement
+      let hideTimeout;
+      
+      // Hover sur le bouton pour ouvrir
+      toggle.addEventListener('mouseenter', () => {
+        clearTimeout(hideTimeout);
+        openDropdown(dropdown);
+      });
+      
+      // Hover sur le menu lui-même
+      const menu = dropdown.querySelector('.dropdown-menu');
+      if (menu) {
+        menu.addEventListener('mouseenter', () => {
+          clearTimeout(hideTimeout);
+          openDropdown(dropdown);
+        });
+        
+        menu.addEventListener('mouseleave', () => {
+          // Petit délai avant de fermer
+          hideTimeout = setTimeout(() => {
+            closeDropdown(dropdown);
+          }, 150);
+        });
+      }
+      
+      // Hover sur le bouton pour fermer
+      toggle.addEventListener('mouseleave', (e) => {
+        // Vérifier si on va vers le menu
+        const relatedTarget = e.relatedTarget;
+        const menu = dropdown.querySelector('.dropdown-menu');
+        
+        if (!menu || !menu.contains(relatedTarget)) {
+          hideTimeout = setTimeout(() => {
+            closeDropdown(dropdown);
+          }, 150);
+        }
+      });
+      
+      // Fermer quand on clique ailleurs
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target)) {
+          closeDropdown(dropdown);
+        }
+      });
+      
+    } else {
+      // Sur mobile: laisser Bootstrap gérer avec clic
+      toggle.setAttribute('data-bs-toggle', 'dropdown');
+      
+      // Mettre à jour la flèche
+      toggle.addEventListener('click', () => {
+        setTimeout(() => {
+          const expanded = toggle.getAttribute('aria-expanded') === 'true';
+          const chevron = dropdown.querySelector('.chevron');
+          if (chevron) {
+            chevron.style.transform = expanded ? 'rotate(180deg)' : '';
+          }
+        }, 10);
+      });
+    }
   });
+
+  // Fonctions helper
+  function openDropdown(dropdown) {
+    dropdown.classList.add('show');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) {
+      menu.classList.add('show');
+      menu.style.display = 'block';
+    }
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'true');
+    
+    const chevron = dropdown.querySelector('.chevron');
+    if (chevron) chevron.style.transform = 'rotate(180deg)';
+  }
+
+  function closeDropdown(dropdown) {
+    dropdown.classList.remove('show');
+    const menu = dropdown.querySelector('.dropdown-menu');
+    if (menu) {
+      menu.classList.remove('show');
+      menu.style.display = '';
+    }
+    const toggle = dropdown.querySelector('.dropdown-toggle');
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    
+    const chevron = dropdown.querySelector('.chevron');
+    if (chevron) chevron.style.transform = '';
+  }
 
   // Active state by URL
   const currentPath = location.pathname.split('/').pop() || 'index.html';
