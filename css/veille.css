@@ -1,0 +1,256 @@
+/* Styles spécifiques à la page Veille Technologique */
+
+/* Hero Veille */
+.veille-hero {
+  min-height: 85vh;
+  padding-top: 96px;
+}
+
+.veille-card {
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.veille-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Méthodologie */
+.method-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.method-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 141, 239, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.method-icon {
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  color: var(--brand-primary);
+  transition: all 0.3s ease;
+}
+
+.method-item:hover .method-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+/* Cartes de thèmes */
+.veille-theme-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.veille-theme-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(91, 141, 239, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.theme-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--brand-primary);
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.veille-theme-card:hover .theme-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.tags .tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(91, 141, 239, 0.15);
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #e9eef7;
+}
+
+/* Cartes d'articles */
+.article-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(91, 141, 239, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.article-link {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.article-link:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* Outils */
+.tool-item {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(91, 141, 239, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.tool-icon {
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--brand-primary);
+  transition: all 0.3s ease;
+}
+
+.tool-item:hover .tool-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+/* Animations */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(91, 141, 239, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0);
+  }
+}
+
+.veille-card .glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  background: radial-gradient(circle, rgba(91, 141, 239, 0.2) 0%, rgba(91, 141, 239, 0) 70%);
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+  z-index: -1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .veille-hero {
+    min-height: auto;
+    padding: 80px 0 40px;
+  }
+
+  .veille-card {
+    margin-top: 30px;
+  }
+
+  .method-item,
+  .tool-item {
+    padding: 15px;
+  }
+}
+
+/* CORRECTION : Titres en blanc pour meilleure visibilité */
+.veille-theme-card h3,
+.veille-theme-card h4,
+.veille-theme-card h5 {
+  color: #ffffff !important;
+}
+
+.article-card h3,
+.article-card h4,
+.article-card h5 {
+  color: #ffffff !important;
+}
+
+/* Assurer que tous les titres soient bien visibles */
+.veille-theme-card .card-body h3,
+.veille-theme-card .card-body h4,
+.veille-theme-card .card-body h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.article-card .card-body h3,
+.article-card .card-body h4,
+.article-card .card-body h5 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+/* Correction spécifique pour les titres des articles */
+.article-card h3.h5 {
+  color: #ffffff !important;
+}
+
+/* Correction pour les titres de thèmes */
+.veille-theme-card h3.h5 {
+  color: #ffffff !important;
+}
+
+/* Amélioration du contraste pour tout le texte */
+.veille-theme-card .text-secondary,
+.article-card .text-secondary {
+  color: #b7c2e0 !important;
+}
+
+/* Correction pour les liens */
+.article-link {
+  color: var(--brand-primary) !important;
+}
+
+.article-link:hover {
+  color: #ffffff !important;
+}
