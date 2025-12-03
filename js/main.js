@@ -4,9 +4,9 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.init({ once: true, duration: 700, easing: 'ease-out-cubic', offset: 80 });
   }
 
-  // Bootstrap tooltips
-  const tooltipTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
-  tooltipTriggers.forEach(function (el) { new bootstrap.Tooltip(el); });
+  // COMMENTÉ : Bootstrap tooltips (enlevé comme demandé)
+  // const tooltipTriggers = Array.prototype.slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  // tooltipTriggers.forEach(function (el) { new bootstrap.Tooltip(el); });
 
   // Dynamic year
   const yearSpan = document.getElementById('year');

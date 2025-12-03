@@ -281,7 +281,7 @@ body {
   border: 1px solid rgba(91, 141, 239, .35);
 }
 
-/* Skills */
+/* Skills - MODIFICATIONS POUR UNIFORMISER LES CARRÉS */
 .skills-grid .skill-item {
   display: grid;
   place-items: center;
@@ -291,6 +291,8 @@ body {
   background: rgba(255, 255, 255, .06);
   border: 1px solid rgba(255, 255, 255, .12);
   transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
+  min-height: 130px; /* Hauteur uniforme */
+  height: 100%;
 }
 
 .skills-grid .skill-item:hover {
@@ -300,13 +302,28 @@ body {
   background-color: rgba(255, 255, 255, .08);
 }
 
-.skills-grid i {
+.skills-grid i, 
+.skills-grid img {
   font-size: 42px;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .skills-grid span {
   font-size: .95rem;
   color: #cdd7ff;
+  text-align: center;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Pour les textes plus longs */
+.skills-grid .skill-text {
+  font-size: .85rem;
+  line-height: 1.2;
 }
 
 /* Footer */
@@ -636,6 +653,16 @@ body {
   .section-padding {
     padding: 64px 0;
   }
+  
+  /* Ajustement pour mobile */
+  .skills-grid .skill-item {
+    min-height: 110px;
+    padding: 14px 6px;
+  }
+  
+  .skills-grid .skill-text {
+    font-size: .8rem;
+  }
 }
 
 /* CV section custom */
@@ -854,4 +881,17 @@ body {
   .navbar .dropdown-item {
     padding-left: 30px;
   }
+}
+
+/* Titres des catégories de compétences */
+#competences h4 {
+  color: #e7edff;
+  font-weight: 600;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 2rem !important;
+}
+
+#competences h4:first-of-type {
+  margin-top: 0 !important;
 }
