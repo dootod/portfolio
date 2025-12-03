@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veille Technologique - Thomas Dumont</title>
+    <meta name="description"
+        content="Veille technologique de Thomas Dumont sur l'intelligence artificielle dans le développement d'applications et web." />
+    <meta name="author" content="Thomas Dumont" />
+    <meta property="og:title" content="Veille Technologique - Thomas Dumont" />
+    <meta property="og:description" content="Veille sur l'IA dans le développement d'applications et web." />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="fr_FR" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+
+    <!-- CSS Libraries -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <!-- Custom CSS -->
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/veille.css" rel="stylesheet" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
+
+            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <div class="nav-shell">
+                    <ul class="nav-menu">
+                        <li><a class="nav-item-link" href="../index.html#accueil"><i
+                                    class="bi bi-house-door me-1"></i>Accueil</a>
+                        </li>
+                        <li><a class="nav-item-link" href="projets.html"><i class="bi bi-kanban me-1"></i>Mes projets</a>
+                        </li>
+                        <li class="dropdown">
+                            <a class="nav-item-link dropdown-toggle active" href="#" id="btsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false"><i
+                                    class="bi bi-mortarboard me-1"></i>BTS SIO <i
+                                    class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i></a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="presentation.html">Présentation</a></li>
+                                <li><a class="dropdown-item active" href="veille.html">Veille technologique</a></li>
+                                <li><a class="dropdown-item" href="#">Tableau de compétences</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-item-link cta btn-animated" href="contact.html"><i
+                                    class="bi bi-envelope me-1"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Veille -->
+    <header id="veille-hero" class="veille-hero d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-7" data-aos="fade-up" data-aos-delay="50">
+                    <span class="badge rounded-pill text-bg-dark-subtle border border-secondary-subtle px-3 py-2">BTS
+                        SIO - Veille obligatoire</span>
+                    <h1 class="display-4 fw-bold mt-3">Veille Technologique</h1>
+                    <p class="lead text-secondary">Surveillance active des avancées de l'intelligence artificielle dans le développement.</p>
+                    <div class="d-flex gap-2 flex-wrap mt-3">
+                        <a href="#themes" class="btn btn-primary btn-lg btn-animated"><i
+                                class="bi bi-search me-2"></i>Explorer les rubriques</a>
+                        <a href="#methodologie" class="btn btn-outline-light btn-lg btn-animated"><i
+                                class="bi bi-tools me-2"></i>Ma méthodologie</a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="veille-card hero-card shadow-lg">
+                        <div class="glow"></div>
+                        <div class="p-4">
+                            <div class="avatar mb-3">
+                                <i class="bi bi-cpu"></i>
+                            </div>
+                            <h2 class="h4 mb-1 text-light">Intelligence Artificielle</h2>
+                            <p class="text-secondary small mb-0">Développement • Web • Outils</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </header>
+
+    <!-- Section Thème Principal -->
+    <section id="theme-principal" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <h2 class="section-title title-accent text-center">Thème principal</h2>
+                            <p class="text-center text-secondary mb-5">L'intelligence artificielle dans le développement</p>
+                            
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <div class="theme-icon-large mb-3">
+                                        <i class="bi bi-robot"></i>
+                                    </div>
+                                    <h3 class="h5 text-light"></h3>
+                                </div>
+                                <div class="col-md-8">
+                                    <p class="fs-5 text-light">Ma veille informatique porte sur l'intelligence artificielle appliquée au développement et aux outils pour développeurs.</p>
+                                    <p class="text-secondary">L'objectif est d'identifier les tendances émergentes, les outils innovants et les bonnes pratiques pour intégrer l'IA dans les processus de développement modernes.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Rubriques -->
+    <section id="themes" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Rubriques de veille</h2>
+                    <p class="text-center text-secondary mb-5">Les trois axes principaux de ma surveillance</p>
+
+                    <div class="row g-4">
+                        <!-- Rubrique 1 -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
+                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="rubrique-icon mb-3">
+                                        <i class="bi bi-phone"></i>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">IA et développement d'applications</h3>
+                                    <p class="text-secondary">Comment l'IA transforme la création d'applications mobiles et desktop, de la génération de code aux tests automatisés.</p>
+                                    <div class="tags mt-3">
+                                        <span class="tag">Code Generation</span>
+                                        <span class="tag">Testing AI</span>
+                                        <span class="tag">Auto-complétion</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rubrique 2 -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="rubrique-icon mb-3">
+                                        <i class="bi bi-globe"></i>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">IA et développement web</h3>
+                                    <p class="text-secondary">Impact de l'IA sur le développement frontend et backend, création d'interfaces, optimisation de performances.</p>
+                                    <div class="tags mt-3">
+                                        <span class="tag">Frontend AI</span>
+                                        <span class="tag">Backend Optimization</span>
+                                        <span class="tag">Web Performance</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Rubrique 3 -->
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
+                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="rubrique-icon mb-3">
+                                        <i class="bi bi-tools"></i>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">Outils IA pour développeurs</h3>
+                                    <p class="text-secondary">Les nouveaux outils et plateformes basés sur l'IA qui augmentent la productivité des développeurs.</p>
+                                    <div class="tags mt-3">
+                                        <span class="tag">GitHub Copilot</span>
+                                        <span class="tag">AI Assistants</span>
+                                        <span class="tag">Productivity Tools</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Méthodologie -->
+    <section id="methodologie" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Méthodologie de veille</h2>
+                    <p class="text-center text-secondary mb-5">Comment je m'informe des évolutions technologiques</p>
+
+                    <div class="card shadow-sm border-0 strong-contrast">
+                        <div class="card-body p-4 p-md-5">
+                            <div class="row g-4 align-items-center">
+                                <div class="col-md-8">
+                                    <h3 class="h4 mb-3 text-light">Méthode Push</h3>
+                                    <p class="text-secondary mb-4">J'utilise une méthode <strong>Push</strong> : les informations viennent à moi automatiquement grâce à des alertes et abonnements. Cette approche passive mais efficace me permet de recevoir régulièrement du contenu pertinent sans avoir à rechercher activement.</p>
+                                    
+                                    <div class="row g-3">
+                                        <div class="col-md-6">
+                                            <div class="method-detail d-flex align-items-start">
+                                                <div class="method-icon-small me-3">
+                                                    <i class="bi bi-bell"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="h6 text-light mb-2">Alertes automatisées</h4>
+                                                    <p class="text-secondary small">Configuration d'alertes sur des mots-clés spécifiques</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="method-detail d-flex align-items-start">
+                                                <div class="method-icon-small me-3">
+                                                    <i class="bi bi-envelope"></i>
+                                                </div>
+                                                <div>
+                                                    <h4 class="h6 text-light mb-2">Newsletters ciblées</h4>
+                                                    <p class="text-secondary small">Abonnement à des bulletins spécialisés</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 text-center d-flex align-items-center justify-content-center">
+                                    <div class="method-visual">
+                                        <i class="bi bi-arrow-down-circle"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Outils Utilisés -->
+    <section id="outils" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Outils de veille</h2>
+                    <p class="text-center text-secondary mb-5">Les plateformes que j'utilise pour ma veille</p>
+
+                    <div class="row g-4">
+                        <div class="col-md-6" data-aos="fade-right">
+                            <div class="outil-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start gap-3">
+                                        <div class="outil-icon">
+                                            <i class="bi bi-google"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="h5 mb-2 text-light">Google Alerts</h3>
+                                            <p class="text-secondary mb-3">Configuration d'alertes automatisées sur des mots-clés spécifiques liés à l'IA dans le développement :</p>
+                                            <ul class="text-secondary">
+                                                <li>IA développement applications</li>
+                                                <li>Outils IA développeurs</li>
+                                                <li>GitHub Copilot nouvelles fonctionnalités</li>
+                                                <li>IA générative code</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6" data-aos="fade-left">
+                            <div class="outil-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <div class="d-flex align-items-start gap-3">
+                                        <div class="outil-icon">
+                                            <i class="bi bi-newspaper"></i>
+                                        </div>
+                                        <div>
+                                            <h3 class="h5 mb-2 text-light">Newsletters</h3>
+                                            <p class="text-secondary mb-3">Abonnement à des newsletters spécialisées dans la tech et l'IA :</p>
+                                            <ul class="text-secondary">
+                                                <li>Newsletters des sites référencés</li>
+                                                <li>Bulletins hebdomadaires tech</li>
+                                                <li>Alertes nouveautés outils développeurs</li>
+                                                <li>Résumés mensuels innovations IA</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Sites de Référence -->
+    <section id="sites" class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Sites de référence</h2>
+                    <p class="text-center text-secondary mb-5">Les sources principales de ma veille technologique</p>
+
+                    <div class="row g-4">
+                        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="50">
+                            <div class="site-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="site-icon mb-3">
+                                        <i class="bi bi-laptop"></i>
+                                    </div>
+                                    <h3 class="h6 mb-2 text-light">Siècle Digital</h3>
+                                    <p class="text-secondary small">Actualités tech et digital, innovations IA</p>
+                                    <a href="https://siecledigital.fr/" target="_blank" class="site-link">Visiter →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="site-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="site-icon mb-3">
+                                        <i class="bi bi-chat-dots"></i>
+                                    </div>
+                                    <h3 class="h6 mb-2 text-light">Blog du Modérateur</h3>
+                                    <p class="text-secondary small">Tendances web, tech et médias sociaux</p>
+                                    <a href="https://www.blogdumoderateur.com/" target="_blank" class="site-link">Visiter →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="site-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="site-icon mb-3">
+                                        <i class="bi bi-lightbulb"></i>
+                                    </div>
+                                    <h3 class="h6 mb-2 text-light">Pandia.pro</h3>
+                                    <p class="text-secondary small">Conseils tech, SEO et développement web</p>
+                                    <a href="https://pandia.pro/" target="_blank" class="site-link">Visiter →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 col-lg-3" data-aos="zoom-in" data-aos-delay="200">
+                            <div class="site-card card h-100 shadow-sm border-0 text-center">
+                                <div class="card-body p-4">
+                                    <div class="site-icon mb-3">
+                                        <i class="bi bi-graph-up"></i>
+                                    </div>
+                                    <h3 class="h6 mb-2 text-light">UpMynt</h3>
+                                    <p class="text-secondary small">Marketing digital et innovations tech</p>
+                                    <a href="https://www.upmynt.com/" target="_blank" class="site-link">Visiter →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Articles -->
+    <section id="articles" class="section-padding bg-body-tertiary">
+        <div class="container">
+            <div class="row justify-content-center" data-aos="fade-up">
+                <div class="col-lg-10">
+                    <h2 class="section-title title-accent text-center">Articles de veille</h2>
+                    <p class="text-center text-secondary mb-5">Dernières actualités sur l'IA dans le développement</p>
+
+                    <div class="row g-4">
+                        <!-- Article 1 -->
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
+                            <div class="article-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <div class="article-meta d-flex justify-content-between mb-3">
+                                        <span class="badge bg-primary">IA & Développement</span>
+                                        <span class="text-secondary small">[Date]</span>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">[Titre de l'article]</h3>
+                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
+                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
+                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 -->
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+                            <div class="article-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <div class="article-meta d-flex justify-content-between mb-3">
+                                        <span class="badge bg-success">Outils IA</span>
+                                        <span class="text-secondary small">[Date]</span>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">[Titre de l'article]</h3>
+                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
+                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
+                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 -->
+                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
+                            <div class="article-card card h-100 shadow-sm border-0">
+                                <div class="card-body p-4">
+                                    <div class="article-meta d-flex justify-content-between mb-3">
+                                        <span class="badge bg-info">Développement Web</span>
+                                        <span class="text-secondary small">[Date]</span>
+                                    </div>
+                                    <h3 class="h5 mb-3 text-light">[Titre de l'article]</h3>
+                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
+                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
+                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="section-padding footer text-light footer-neo">
+        <div class="footer-canvas" aria-hidden="true">
+            <span class="stripe s1"></span>
+            <span class="stripe s2"></span>
+            <span class="stripe s3"></span>
+            <span class="dots"></span>
+        </div>
+        <div class="container position-relative">
+            <div class="glass-panel">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="brandline d-flex align-items-center gap-3 mb-2">
+                            <span class="mark">TD</span>
+                            <div>
+                                <div class="who">Thomas Dumont</div>
+                                <div class="role">Développement web • Applications</div>
+                            </div>
+                        </div>
+                        <div class="contacts d-flex flex-column gap-2">
+                            <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73
+                                86</a>
+                            <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i
+                                    class="bi bi-envelope"></i>
+                                thomas.dumont1806@gmail.com</a>
+                            <span class="contact-link"><i class="bi bi-geo-alt"></i> Pays de la Loire</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+                            <a class="btn btn-outline-light btn-animated" href="#veille-hero"><i
+                                    class="bi bi-arrow-up"></i> Haut de
+                                page</a>
+                            <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i>
+                                Me contacter</a>
+                        </div>
+                        <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+                            <a class="icon" href="https://github.com/dootod" target="_blank" rel="noopener"
+                                aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank"
+                                rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i
+                                    class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+                <span>© <span id="year"></span> Thomas Dumont</span>
+                <span class="links d-flex gap-3">
+                    <a href="../index.html#accueil">Accueil</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="presentation.html">Présentation</a>
+                    <a href="veille.html">Veille technologique</a>
+                    <a href="#">Tableau de compétences</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JS Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Scripts personnalisés -->
+    <script src="../js/veille.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
