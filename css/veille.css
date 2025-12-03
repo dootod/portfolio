@@ -15,55 +15,120 @@
   transform: translateY(-5px);
 }
 
-/* Méthodologie */
-.method-item {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.method-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(91, 141, 239, 0.4);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.method-icon {
-  width: 60px;
-  height: 60px;
+/* Icône de thème principal */
+.theme-icon-large {
+  width: 100px;
+  height: 100px;
   margin: 0 auto;
   border-radius: 50%;
   background: rgba(91, 141, 239, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 24px;
+  font-size: 48px;
   color: var(--brand-primary);
   transition: all 0.3s ease;
 }
 
-.method-item:hover .method-icon {
-  transform: scale(1.1);
-  background: rgba(91, 141, 239, 0.25);
-}
-
-/* Cartes de thèmes */
-.veille-theme-card {
+/* Cartes de rubriques */
+.rubrique-card {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: all 0.3s ease;
   border-radius: 16px;
 }
 
-.veille-theme-card:hover {
+.rubrique-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(91, 141, 239, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.rubrique-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: var(--brand-primary);
+  transition: all 0.3s ease;
+}
+
+.rubrique-card:hover .rubrique-icon {
+  transform: scale(1.1);
+  background: rgba(91, 141, 239, 0.25);
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.tags .tag {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(91, 141, 239, 0.15);
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: #e9eef7;
+}
+
+/* Méthodologie */
+.method-detail {
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.method-detail:hover {
+  border-color: rgba(91, 141, 239, 0.4);
+  transform: translateY(-2px);
+}
+
+.method-icon-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(91, 141, 239, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  color: var(--brand-primary);
+  flex-shrink: 0;
+}
+
+.method-visual {
+  font-size: 80px;
+  color: var(--brand-primary);
+  opacity: 0.7;
+}
+
+/* Outils */
+.outil-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+}
+
+.outil-card:hover {
   transform: translateY(-5px);
   border-color: rgba(91, 141, 239, 0.4);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.theme-icon {
+.outil-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -77,70 +142,36 @@
   transition: all 0.3s ease;
 }
 
-.veille-theme-card:hover .theme-icon {
+.outil-card:hover .outil-icon {
   transform: scale(1.1);
   background: rgba(91, 141, 239, 0.25);
 }
 
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 12px;
+.outil-card ul {
+  margin-bottom: 0;
+  padding-left: 1.5rem;
 }
 
-.tags .tag {
-  display: inline-block;
-  padding: 4px 10px;
-  background: rgba(91, 141, 239, 0.15);
-  border: 1px solid rgba(91, 141, 239, 0.3);
-  border-radius: 20px;
-  font-size: 0.8rem;
-  color: #e9eef7;
+.outil-card ul li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
 }
 
-/* Cartes d'articles */
-.article-card {
+/* Sites de référence */
+.site-card {
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   transition: all 0.3s ease;
   border-radius: 16px;
 }
 
-.article-card:hover {
+.site-card:hover {
   transform: translateY(-5px);
   border-color: rgba(91, 141, 239, 0.4);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
 }
 
-.article-link {
-  color: var(--brand-primary);
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.article-link:hover {
-  color: #fff;
-  transform: translateX(3px);
-}
-
-/* Outils */
-.tool-item {
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.05);
-  border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-}
-
-.tool-item:hover {
-  transform: translateY(-4px);
-  border-color: rgba(91, 141, 239, 0.4);
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.tool-icon {
+.site-icon {
   width: 50px;
   height: 50px;
   margin: 0 auto;
@@ -154,9 +185,50 @@
   transition: all 0.3s ease;
 }
 
-.tool-item:hover .tool-icon {
+.site-card:hover .site-icon {
   transform: scale(1.1);
   background: rgba(91, 141, 239, 0.25);
+}
+
+.site-link {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.site-link:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* Articles */
+.article-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: all 0.3s ease;
+  border-radius: 16px;
+  height: 100%;
+}
+
+.article-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(91, 141, 239, 0.4);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.article-link {
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.article-link:hover {
+  color: #fff;
+  transform: translateX(3px);
 }
 
 /* Animations */
@@ -185,6 +257,31 @@
   z-index: -1;
 }
 
+/* CORRECTION : Titres en blanc pour meilleure visibilité */
+.rubrique-card h3,
+.outil-card h3,
+.site-card h3,
+.article-card h3 {
+  color: #ffffff !important;
+}
+
+.rubrique-card .card-body h3,
+.outil-card .card-body h3,
+.site-card .card-body h3,
+.article-card .card-body h3 {
+  color: #ffffff !important;
+  font-weight: 600;
+}
+
+.theme-icon-large + h3 {
+  color: #ffffff !important;
+}
+
+/* Alignement vertical pour la méthode push */
+.col-md-4.d-flex.align-items-center.justify-content-center {
+  min-height: 200px;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .veille-hero {
@@ -196,61 +293,49 @@
     margin-top: 30px;
   }
 
-  .method-item,
-  .tool-item {
-    padding: 15px;
+  .theme-icon-large {
+    width: 80px;
+    height: 80px;
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .rubrique-card,
+  .outil-card,
+  .site-card,
+  .article-card {
+    margin-bottom: 20px;
+  }
+
+  .method-detail {
+    margin-bottom: 15px;
+  }
+
+  .method-visual {
+    font-size: 60px;
+    margin-top: 20px;
   }
 }
 
-/* CORRECTION : Titres en blanc pour meilleure visibilité */
-.veille-theme-card h3,
-.veille-theme-card h4,
-.veille-theme-card h5 {
-  color: #ffffff !important;
-}
+@media (max-width: 576px) {
+  .rubrique-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
 
-.article-card h3,
-.article-card h4,
-.article-card h5 {
-  color: #ffffff !important;
-}
+  .site-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+  }
 
-/* Assurer que tous les titres soient bien visibles */
-.veille-theme-card .card-body h3,
-.veille-theme-card .card-body h4,
-.veille-theme-card .card-body h5 {
-  color: #ffffff !important;
-  font-weight: 600;
-}
+  .tags .tag {
+    font-size: 0.75rem;
+    padding: 3px 8px;
+  }
 
-.article-card .card-body h3,
-.article-card .card-body h4,
-.article-card .card-body h5 {
-  color: #ffffff !important;
-  font-weight: 600;
-}
-
-/* Correction spécifique pour les titres des articles */
-.article-card h3.h5 {
-  color: #ffffff !important;
-}
-
-/* Correction pour les titres de thèmes */
-.veille-theme-card h3.h5 {
-  color: #ffffff !important;
-}
-
-/* Amélioration du contraste pour tout le texte */
-.veille-theme-card .text-secondary,
-.article-card .text-secondary {
-  color: #b7c2e0 !important;
-}
-
-/* Correction pour les liens */
-.article-link {
-  color: var(--brand-primary) !important;
-}
-
-.article-link:hover {
-  color: #ffffff !important;
+  .method-visual {
+    font-size: 50px;
+  }
 }
