@@ -1,6 +1,6 @@
 /* Styles spécifiques à la page Veille Technologique */
 
-/* Hero Veille */
+/* ── Hero ── */
 .veille-hero {
   min-height: 85vh;
   padding-top: 96px;
@@ -15,13 +15,14 @@
   transform: translateY(-5px);
 }
 
-/* Icône de thème principal */
+/* ── Icône principale ── */
 .theme-icon-large {
   width: 100px;
   height: 100px;
   margin: 0 auto;
   border-radius: 50%;
-  background: rgba(91, 141, 239, 0.15);
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,26 +31,52 @@
   transition: all 0.3s ease;
 }
 
-/* Cartes de rubriques */
-.rubrique-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s ease;
+/* ── Style partagé pour toutes les cartes de contenu ── */
+.rubrique-card,
+.outil-card,
+.site-card,
+.article-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.10);
   border-radius: 16px;
+  transition: all 0.3s ease;
 }
 
-.rubrique-card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(91, 141, 239, 0.4);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+.rubrique-card:hover,
+.outil-card:hover,
+.site-card:hover,
+.article-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 141, 239, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
+/* Titres des cartes — blanc uniforme */
+.rubrique-card h3,
+.rubrique-card h4,
+.rubrique-card h5,
+.outil-card h3,
+.outil-card h4,
+.outil-card h5,
+.site-card h3,
+.site-card h4,
+.site-card h5,
+.article-card h3,
+.article-card h4,
+.article-card h5 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* ── Icône des rubriques ── */
 .rubrique-icon {
   width: 70px;
   height: 70px;
   margin: 0 auto;
   border-radius: 50%;
-  background: rgba(91, 141, 239, 0.15);
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -60,10 +87,10 @@
 
 .rubrique-card:hover .rubrique-icon {
   transform: scale(1.1);
-  background: rgba(91, 141, 239, 0.25);
+  background: rgba(91, 141, 239, 0.22);
 }
 
-/* Tags */
+/* ── Tags ── */
 .tags {
   display: flex;
   flex-wrap: wrap;
@@ -74,32 +101,39 @@
 .tags .tag {
   display: inline-block;
   padding: 4px 10px;
-  background: rgba(91, 141, 239, 0.15);
-  border: 1px solid rgba(91, 141, 239, 0.3);
+  background: rgba(91, 141, 239, 0.10);
+  border: 1px solid rgba(91, 141, 239, 0.25);
   border-radius: 20px;
   font-size: 0.8rem;
-  color: #e9eef7;
+  color: #b8c8f0;
 }
 
-/* Méthodologie */
+/* ── Méthodologie ── */
 .method-detail {
   padding: 15px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.04);
   border-radius: 12px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   transition: all 0.3s ease;
 }
 
 .method-detail:hover {
-  border-color: rgba(91, 141, 239, 0.4);
+  border-color: rgba(91, 141, 239, 0.35);
+  background: rgba(255, 255, 255, 0.07);
   transform: translateY(-2px);
+}
+
+.method-detail h4,
+.method-detail h6 {
+  color: #e9eef7;
 }
 
 .method-icon-small {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: rgba(91, 141, 239, 0.15);
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,28 +145,16 @@
 .method-visual {
   font-size: 80px;
   color: var(--brand-primary);
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
-/* Outils */
-.outil-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s ease;
-  border-radius: 16px;
-}
-
-.outil-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(91, 141, 239, 0.4);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
+/* ── Icônes outils ── */
 .outil-icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background: rgba(91, 141, 239, 0.15);
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,7 +166,7 @@
 
 .outil-card:hover .outil-icon {
   transform: scale(1.1);
-  background: rgba(91, 141, 239, 0.25);
+  background: rgba(91, 141, 239, 0.22);
 }
 
 .outil-card ul {
@@ -155,28 +177,17 @@
 .outil-card ul li {
   margin-bottom: 0.5rem;
   font-size: 0.9rem;
+  color: #b7c2e0;
 }
 
-/* Sites de référence */
-.site-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s ease;
-  border-radius: 16px;
-}
-
-.site-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(91, 141, 239, 0.4);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
+/* ── Icônes sites ── */
 .site-icon {
   width: 50px;
   height: 50px;
   margin: 0 auto;
   border-radius: 50%;
-  background: rgba(91, 141, 239, 0.15);
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.22);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -187,7 +198,7 @@
 
 .site-card:hover .site-icon {
   transform: scale(1.1);
-  background: rgba(91, 141, 239, 0.25);
+  background: rgba(91, 141, 239, 0.22);
 }
 
 .site-link {
@@ -196,52 +207,34 @@
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .site-link:hover {
-  color: #fff;
+  color: #e9eef7;
   transform: translateX(3px);
 }
 
-/* Articles */
-.article-card {
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  transition: all 0.3s ease;
-  border-radius: 16px;
-  height: 100%;
-}
-
-.article-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(91, 141, 239, 0.4);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
-}
-
+/* ── Liens d'articles ── */
 .article-link {
   color: var(--brand-primary);
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
   transition: all 0.3s ease;
+  display: inline-block;
 }
 
 .article-link:hover {
-  color: #fff;
+  color: #e9eef7;
   transform: translateX(3px);
 }
 
-/* Animations */
+/* ── Animation pulse ── */
 @keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 10px rgba(91, 141, 239, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(91, 141, 239, 0);
-  }
+  0% { box-shadow: 0 0 0 0 rgba(91, 141, 239, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(91, 141, 239, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(91, 141, 239, 0); }
 }
 
 .veille-card .glow {
@@ -257,32 +250,12 @@
   z-index: -1;
 }
 
-/* CORRECTION : Titres en blanc pour meilleure visibilité */
-.rubrique-card h3,
-.outil-card h3,
-.site-card h3,
-.article-card h3 {
-  color: #ffffff !important;
-}
-
-.rubrique-card .card-body h3,
-.outil-card .card-body h3,
-.site-card .card-body h3,
-.article-card .card-body h3 {
-  color: #ffffff !important;
-  font-weight: 600;
-}
-
-.theme-icon-large + h3 {
-  color: #ffffff !important;
-}
-
-/* Alignement vertical pour la méthode push */
+/* ── Alignement vertical méthode push ── */
 .col-md-4.d-flex.align-items-center.justify-content-center {
   min-height: 200px;
 }
 
-/* Responsive adjustments */
+/* ── Responsive ── */
 @media (max-width: 768px) {
   .veille-hero {
     min-height: auto;
