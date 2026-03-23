@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tableau de compétences - Thomas Dumont</title>
+    <meta name="description" content="Tableau de synthèse des réalisations professionnelles BTS SIO SLAM - Thomas Dumont" />
+    <meta name="author" content="Thomas Dumont" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/tableau-competences.css" rel="stylesheet" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="80" tabindex="0">
+
+    <!-- Navbar -->
+    <nav id="mainNav" class="navbar navbar-dark navbar-expand-lg fixed-top glass-nav nav-animated">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a class="navbar-brand fw-semibold me-3" href="../index.html#accueil">TD<span class="brand-dot">.</span></a>
+            <button class="navbar-toggler ms-auto d-lg-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu" aria-controls="navbarMenu" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarMenu">
+                <div class="nav-shell">
+                    <ul class="nav-menu">
+                        <li><a class="nav-item-link" href="../index.html#accueil"><i class="bi bi-house-door me-1"></i>Accueil</a></li>
+                        <li><a class="nav-item-link" href="projets.html"><i class="bi bi-kanban me-1"></i>Mes projets</a></li>
+                        <li class="dropdown">
+                            <a class="nav-item-link dropdown-toggle active" href="#" id="btsDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="bi bi-mortarboard me-1"></i>BTS SIO
+                                <i class="bi bi-chevron-down ms-1 chevron" aria-hidden="true"></i>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="presentation.html">Présentation</a></li>
+                                <li><a class="dropdown-item" href="veille.html">Veille technologique</a></li>
+                                <li><a class="dropdown-item active" href="tableau-competences.html">Tableau de compétences</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="nav-item-link cta btn-animated" href="contact.html"><i class="bi bi-envelope me-1"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header id="tc-hero" class="tc-hero d-flex align-items-center">
+        <div class="container py-5">
+            <div class="row align-items-center g-4">
+                <div class="col-12 col-lg-8" data-aos="fade-up" data-aos-delay="50">
+                    <span class="badge rounded-pill text-bg-dark-subtle border border-secondary-subtle px-3 py-2">
+                        BTS SIO - Épreuve E5
+                    </span>
+                    <h1 class="display-4 fw-bold mt-3">Tableau de compétences</h1>
+                    <p class="lead text-secondary">Synthèse de mes réalisations professionnelles et des compétences mises en œuvre au cours de ma formation BTS SIO option SLAM.</p>
+                    <div class="d-flex gap-2 flex-wrap mt-3">
+                        <a href="#tableau" class="btn btn-primary btn-lg btn-animated">
+                            <i class="bi bi-table me-2"></i>Voir le tableau
+                        </a>
+                        <a href="https://docs.google.com/spreadsheets/d/1NJswGk3y1uAwI2hJH5Wy_jgVP12mpxwizHV_Lk5EvnY/edit?usp=sharing"
+                           target="_blank" rel="noopener" class="btn btn-outline-light btn-lg btn-animated">
+                            <i class="bi bi-box-arrow-up-right me-2"></i>Google Sheets
+                        </a>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-4 text-center" data-aos="zoom-in" data-aos-delay="150">
+                    <div class="hero-card shadow-lg">
+                        <div class="glow"></div>
+                        <div class="p-4">
+                            <div class="avatar mb-3"><i class="bi bi-patch-check"></i></div>
+                            <h2 class="h4 mb-1 text-light">Épreuve E5</h2>
+                            <p class="text-secondary small mb-0">SESSION 2025 - SLAM</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-wave"></div>
+    </header>
+
+    <!-- Section Tableau -->
+    <section id="tableau" class="section-padding">
+        <div class="container-fluid px-3 px-md-4">
+            <div class="row justify-content-center">
+                <div class="col-lg-11">
+
+                    <h2 class="section-title title-accent text-center mb-2">Tableau de synthèse E5</h2>
+                    <p class="text-center text-secondary mb-5">BTS Services Informatiques aux Organisations - Option SLAM</p>
+
+                    <!-- Identité + Légende -->
+                    <div class="row g-3 mb-4" data-aos="fade-up">
+                        <div class="col-md-5">
+                            <div class="tc-info-card">
+                                <p class="text-secondary small mb-3" style="text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;">Informations candidat</p>
+                                <div class="row g-2">
+                                    <div class="col-6">
+                                        <p class="text-secondary small mb-1">Candidat</p>
+                                        <p class="mb-0 text-light fw-semibold">Dumont Thomas</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-secondary small mb-1">Option</p>
+                                        <p class="mb-0 text-light fw-semibold">SLAM</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-secondary small mb-1">Centre</p>
+                                        <p class="mb-0 text-light fw-semibold">ESUPEC</p>
+                                    </div>
+                                    <div class="col-6">
+                                        <p class="text-secondary small mb-1">Session</p>
+                                        <p class="mb-0 text-light fw-semibold">2025</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="tc-info-card h-100">
+                                <p class="text-secondary small mb-3" style="text-transform:uppercase;letter-spacing:.06em;font-size:.72rem;">Légende - niveaux de compétence</p>
+                                <div class="d-flex flex-wrap gap-2">
+                                    <span class="legend-pill" style="background:rgba(102,217,232,.08);border:1px solid rgba(102,217,232,.25);">
+                                        <span class="niv niv-1" style="width:22px;height:22px;font-size:.72rem;">1</span>
+                                        <span class="text-secondary" style="font-size:.78rem;">Sensibilisation</span>
+                                    </span>
+                                    <span class="legend-pill" style="background:rgba(91,141,239,.08);border:1px solid rgba(91,141,239,.25);">
+                                        <span class="niv niv-2" style="width:22px;height:22px;font-size:.72rem;">2</span>
+                                        <span class="text-secondary" style="font-size:.78rem;">Pratique courante</span>
+                                    </span>
+                                    <span class="legend-pill" style="background:rgba(134,142,250,.08);border:1px solid rgba(134,142,250,.25);">
+                                        <span class="niv niv-3" style="width:22px;height:22px;font-size:.72rem;">3</span>
+                                        <span class="text-secondary" style="font-size:.78rem;">Maîtrise</span>
+                                    </span>
+                                    <span class="legend-pill" style="background:rgba(91,141,239,.05);border:1px solid rgba(91,141,239,.18);">
+                                        <span class="niv niv-13" style="width:30px;height:22px;font-size:.60rem;">1+3</span>
+                                        <span class="text-secondary" style="font-size:.78rem;">Niveaux multiples</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tableau -->
+                    <div class="tableau-outer" data-aos="fade-up" data-aos-delay="100">
+                        <div class="tableau-scroll">
+                            <table class="tc-table">
+                                <thead>
+                                    <tr class="tr-top">
+                                        <th class="col-real" rowspan="2">Réalisation professionnelle</th>
+                                        <th class="col-period" rowspan="2">Période</th>
+                                        <th class="col-comp">Gérer le patrimoine informatique</th>
+                                        <th class="col-comp">Répondre aux incidents et demandes</th>
+                                        <th class="col-comp">Développer la présence en ligne</th>
+                                        <th class="col-comp">Travailler en mode projet</th>
+                                        <th class="col-comp">Mettre à disposition un service</th>
+                                        <th class="col-comp">Développement professionnel</th>
+                                    </tr>
+                                    <tr class="tr-sub">
+                                        <th class="col-comp">Recenser · Exploiter · Habilitation · Continuité · Sauvegardes · Règles</th>
+                                        <th class="col-comp">Collecter · Traiter réseau/système · Traiter applicatifs</th>
+                                        <th class="col-comp">Image organisation · Référencer · Faire évoluer site web</th>
+                                        <th class="col-comp">Analyser objectifs · Planifier · Évaluer indicateurs</th>
+                                        <th class="col-comp">Tests · Déployer · Accompagner</th>
+                                        <th class="col-comp">Env. apprentissage · Veille · Identité pro · Projet pro</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <!-- === FORMATION === -->
+                                    <tr class="tr-category">
+                                        <td colspan="8">
+                                            <span class="cat-icon"><i class="bi bi-mortarboard-fill"></i></span>
+                                            Réalisations en cours de formation
+                                        </td>
+                                    </tr>
+
+                                    <!-- PPE1-1 -->
+                                    <tr class="tr-section">
+                                        <td colspan="8">
+                                            <span class="ppe-badge"><i class="bi bi-folder2-open"></i>PPE1-1</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Mise en place d'un serveur web Apache sur Debian</td>
+                                        <td class="td-periode">10/10/24 → 14/11/24</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Planification de tâches</td>
+                                        <td class="td-periode">10/10/24 → 14/11/24</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+
+                                    <!-- PPE1-2 -->
+                                    <tr class="tr-section">
+                                        <td colspan="8">
+                                            <span class="ppe-badge"><i class="bi bi-folder2-open"></i>PPE1-2</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Diagramme de GANTT</td>
+                                        <td class="td-periode">28/11/24 → 16/01/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création du site web BST79</td>
+                                        <td class="td-periode">28/11/24 → 16/01/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-13">1+3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Documentation</td>
+                                        <td class="td-periode">28/11/24 → 16/01/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-3">3</span></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création du site web BST79 en fonction du cahier des charges</td>
+                                        <td class="td-periode">28/11/24 → 16/01/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-3">3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+
+                                    <!-- PPE2 -->
+                                    <tr class="tr-section">
+                                        <td colspan="8">
+                                            <span class="ppe-badge"><i class="bi bi-folder2-open"></i>PPE2</span>
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Système de login en PHP pour un site de gestion de placement sur un marché</td>
+                                        <td class="td-periode">23/01/25 → 03/04/25</td>
+                                        <td class="td-comp"><span class="niv niv-3">3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création d'un Trello pour organiser les tâches</td>
+                                        <td class="td-periode">23/01/25 → 03/04/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Hébergement du site web avec IONOS et FileZilla</td>
+                                        <td class="td-periode">23/01/25 → 03/04/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création de la page login, inscription et accueil gestionnaire du site placement sur un marché</td>
+                                        <td class="td-periode">23/01/25 → 03/04/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-3">3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Maquette de certaines pages du site</td>
+                                        <td class="td-periode">23/01/25 → 03/04/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-1">1</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+
+                                    <!-- === STAGE 1ère ANNÉE === -->
+                                    <tr class="tr-category">
+                                        <td colspan="8">
+                                            <span class="cat-icon"><i class="bi bi-briefcase-fill"></i></span>
+                                            Réalisations en milieu professionnel - 1ère année (DC Consult)
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création d'un Trello pour organiser les tâches</td>
+                                        <td class="td-periode">12/05/25 → 25/06/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-23">2+3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Hébergement du site web vitrine DC Consult avec LWS</td>
+                                        <td class="td-periode">12/05/25 → 25/06/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-2">2</span></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Création du site web vitrine DC Consult</td>
+                                        <td class="td-periode">12/05/25 → 25/06/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-3">3</span></td>
+                                        <td class="td-comp"><span class="niv niv-13">1+2+3</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Cahier des charges du site web vitrine DC Consult</td>
+                                        <td class="td-periode">12/05/25 → 25/06/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-1">1</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation">Maquette du site web vitrine DC Consult sur Figma</td>
+                                        <td class="td-periode">12/05/25 → 25/06/25</td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"><span class="niv niv-1">1</span></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                        <td class="td-comp"></td>
+                                    </tr>
+
+                                    <!-- === STAGE 2ème ANNÉE === -->
+                                    <tr class="tr-category">
+                                        <td colspan="8">
+                                            <span class="cat-icon"><i class="bi bi-briefcase-fill"></i></span>
+                                            Réalisations en milieu professionnel - 2ème année
+                                        </td>
+                                    </tr>
+                                    <tr class="tr-data">
+                                        <td class="td-realisation" colspan="7" style="color:#6a7db5;font-style:italic;text-align:center;padding:20px;">
+                                            À compléter
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Lien Google Sheets -->
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="150">
+                        <a href="https://docs.google.com/spreadsheets/d/1NJswGk3y1uAwI2hJH5Wy_jgVP12mpxwizHV_Lk5EvnY/edit?usp=sharing"
+                           target="_blank" rel="noopener" class="sheets-link-card">
+                            <div class="sheets-icon"><i class="bi bi-table"></i></div>
+                            <div>
+                                <p class="mb-0 fw-semibold text-light">Voir le document original</p>
+                                <p class="mb-0 text-secondary small">Ouvrir le tableau complet sur Google Sheets - Épreuve E5</p>
+                            </div>
+                            <i class="bi bi-arrow-up-right ms-auto text-secondary"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="section-padding footer text-light footer-neo">
+        <div class="footer-canvas" aria-hidden="true">
+            <span class="stripe s1"></span>
+            <span class="stripe s2"></span>
+            <span class="stripe s3"></span>
+            <span class="dots"></span>
+        </div>
+        <div class="container position-relative">
+            <div class="glass-panel">
+                <div class="row g-4 align-items-center">
+                    <div class="col-lg-7">
+                        <div class="brandline d-flex align-items-center gap-3 mb-2">
+                            <span class="mark">TD</span>
+                            <div>
+                                <div class="who">Thomas Dumont</div>
+                                <div class="role">Développement web • Applications</div>
+                            </div>
+                        </div>
+                        <div class="contacts d-flex flex-column gap-2">
+                            <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73 86</a>
+                            <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i class="bi bi-envelope"></i> thomas.dumont1806@gmail.com</a>
+                            <span class="contact-link"><i class="bi bi-geo-alt"></i> Pays de la Loire</span>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 text-lg-end">
+                        <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
+                            <a class="btn btn-outline-light btn-animated" href="#tc-hero"><i class="bi bi-arrow-up"></i> Haut de page</a>
+                            <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i> Me contacter</a>
+                        </div>
+                        <div class="social mt-3 d-flex justify-content-lg-end gap-2">
+                            <a class="icon" href="https://github.com/dootod" target="_blank" rel="noopener" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="meta d-flex justify-content-between flex-wrap gap-2 small">
+                <span>© <span id="year"></span> Thomas Dumont</span>
+                <span class="links d-flex gap-3">
+                    <a href="../index.html#accueil">Accueil</a>
+                    <a href="projets.html">Projets</a>
+                    <a href="presentation.html">Présentation</a>
+                    <a href="veille.html">Veille technologique</a>
+                    <a href="tableau-competences.html">Tableau de compétences</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+</html>
