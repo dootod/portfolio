@@ -895,3 +895,171 @@ body {
 #competences h4:first-of-type {
   margin-top: 0 !important;
 }
+
+/* Parcours categories */
+.parcours-category-header {
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.parcours-cat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  background: rgba(91, 141, 239, 0.2);
+  border: 1px solid rgba(91, 141, 239, 0.35);
+  color: var(--brand-primary);
+  font-size: 14px;
+}
+
+.parcours-cat-icon.experience {
+  background: rgba(81, 207, 102, 0.15);
+  border-color: rgba(81, 207, 102, 0.35);
+  color: #51cf66;
+}
+
+.parcours-cat-icon.job {
+  background: rgba(252, 196, 25, 0.15);
+  border-color: rgba(252, 196, 25, 0.35);
+  color: #fcc419;
+}
+
+.timeline-dot.dot-experience {
+  background: #51cf66;
+  box-shadow: 0 0 0 4px rgba(81, 207, 102, 0.18);
+}
+
+.timeline-dot.dot-job {
+  background: #fcc419;
+  box-shadow: 0 0 0 4px rgba(252, 196, 25, 0.18);
+}
+
+/* ===== Skills section moderne ===== */
+.skills-category-label {
+  display: flex;
+  align-items: center;
+}
+
+.skills-cat-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  background: rgba(91, 141, 239, 0.12);
+  border: 1px solid rgba(91, 141, 239, 0.3);
+  color: #a8c2f8;
+}
+
+.skills-cat-pill.skills-cat-green {
+  background: rgba(81, 207, 102, 0.10);
+  border-color: rgba(81, 207, 102, 0.3);
+  color: #86efac;
+}
+
+.skills-cat-pill.skills-cat-cyan {
+  background: rgba(102, 217, 232, 0.10);
+  border-color: rgba(102, 217, 232, 0.3);
+  color: #67e8f9;
+}
+
+.skills-cat-pill.skills-cat-purple {
+  background: rgba(192, 132, 252, 0.10);
+  border-color: rgba(192, 132, 252, 0.3);
+  color: #c084fc;
+}
+
+.skills-modern-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 12px;
+}
+
+.skill-modern-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-modern-item::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.06), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 16px;
+}
+
+.skill-modern-item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(91, 141, 239, 0.35);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+.skill-modern-item:hover::before {
+  opacity: 1;
+}
+
+.skill-modern-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.25s ease;
+}
+
+.skill-modern-item:hover .skill-modern-icon {
+  transform: scale(1.08);
+}
+
+.skill-modern-icon i {
+  font-size: 28px;
+}
+
+.skill-modern-item span {
+  font-size: 0.78rem;
+  color: #b7c2e0;
+  text-align: center;
+  line-height: 1.3;
+  font-weight: 500;
+}
+
+@media (max-width: 576px) {
+  .skills-modern-grid {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 8px;
+  }
+
+  .skill-modern-item {
+    padding: 14px 8px 12px;
+  }
+
+  .skill-modern-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .skill-modern-icon i {
+    font-size: 24px;
+  }
+}
