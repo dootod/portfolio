@@ -113,12 +113,13 @@
                     <h2 class="section-title title-accent text-center">Explorez par catégorie</h2>
                     <p class="text-center text-secondary mb-4">Filtrez mes projets selon vos centres d'intérêt</p>
 
-                    <div class="d-flex justify-content-center flex-wrap gap-2" id="filtres-categories">
-                        <button class="btn btn-filter active" data-filter="all">Tous</button>
-                        <button class="btn btn-filter" data-filter="web">Développement Web</button>
-                        <button class="btn btn-filter" data-filter="app">Applications</button>
-                        <button class="btn btn-filter" data-filter="database">Bases de données</button>
-                        <button class="btn btn-filter" data-filter="school">Projets académiques</button>
+                    <div class="filters-wrapper" id="filtres-categories">
+                        <button class="btn-filter active" data-filter="all">Tous</button>
+                        <button class="btn-filter" data-filter="web">Développement Web</button>
+                        <button class="btn-filter" data-filter="app">Applications</button>
+                        <button class="btn-filter" data-filter="database">Bases de données</button>
+                        <button class="btn-filter" data-filter="school">Projets académiques</button>
+                        <button class="btn-filter" data-filter="stage">Stage</button>
                     </div>
                 </div>
             </div>
@@ -134,20 +135,21 @@
                     <p class="text-center text-secondary mb-5">Cliquez sur un projet pour en savoir plus</p>
 
                     <div class="row g-4" id="grid-projets">
-                        <!-- Projet 1 -->
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+
+                        <!-- Projet 1 - DC Consult -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50" data-category="web stage">
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
                                 data-bs-target="#projetModal" data-projet="1">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges">
                                         <span class="badge bg-primary">Web</span>
-                                        <span class="badge bg-secondary">School</span>
+                                        <span class="badge bg-success">Stage</span>
                                     </div>
-                                    <img src="../img/modal/1.png" alt="">
+                                    <img src="../img/modal/1.png" alt="Site vitrine DC Consult">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Site vitrine DC Consult</h3>
-                                    <p class="text-secondary small">Création d'un site vitrine pour une PME.</p>
+                                    <p class="text-secondary small">Création d'un site vitrine pour une PME spécialisée en charpente métallique.</p>
                                     <div class="technos">
                                         <span class="techno-tag">HTML</span>
                                         <span class="techno-tag">CSS</span>
@@ -158,41 +160,41 @@
                             </div>
                         </div>
 
-                        <!-- Projet 2 -->
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+                        <!-- Projet 2 - AP1 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100" data-category="web school">
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
                                 data-bs-target="#projetModal" data-projet="2">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges">
                                         <span class="badge bg-primary">Web</span>
-                                        <span class="badge bg-secondary">School</span>
+                                        <span class="badge bg-secondary">Académique</span>
                                     </div>
-                                    <img src="../img/modal/2.png" alt="">
+                                    <img src="../img/modal/2.png" alt="Projet AP1">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Projet AP1</h3>
-                                    <p class="text-secondary small">Création d'un site vitrine Wordpress pour une PME.</p>
+                                    <p class="text-secondary small">Création en équipe du site vitrine BST79 via WordPress.</p>
                                     <div class="technos">
-                                        <span class="techno-tag">Wordpress</span>
+                                        <span class="techno-tag">WordPress</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Projet 3 -->
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+                        <!-- Projet 3 - AP2 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150" data-category="web database school">
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
                                 data-bs-target="#projetModal" data-projet="3">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges">
                                         <span class="badge bg-primary">Web</span>
-                                        <span class="badge bg-secondary">School</span>
+                                        <span class="badge bg-secondary">Académique</span>
                                     </div>
-                                    <img src="../img/modal/3.png" alt="">
+                                    <img src="../img/modal/3.png" alt="Projet AP2">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Projet AP2</h3>
-                                    <p class="text-secondary small">Création d'un site pour les placements sur un marché.</p>
+                                    <p class="text-secondary small">Site de gestion de placements sur un marché avec système de réservation.</p>
                                     <div class="technos">
                                         <span class="techno-tag">HTML</span>
                                         <span class="techno-tag">CSS</span>
@@ -203,20 +205,20 @@
                             </div>
                         </div>
 
-                        <!-- Projet 4 -->
-                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-category="web school">
+                        <!-- Projet 4 - AP3 -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200" data-category="web database school app">
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
                                 data-bs-target="#projetModal" data-projet="4">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges">
                                         <span class="badge bg-primary">Web</span>
-                                        <span class="badge bg-secondary">School</span>
+                                        <span class="badge bg-secondary">Académique</span>
                                     </div>
-                                    <img src="../img/modal/4.png" alt="">
+                                    <img src="../img/modal/4.png" alt="Projet AP3 - Puy du Fou">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Projet AP3</h3>
-                                    <p class="text-secondary small">Création d'un site web dynamique pour gérer les itinéraires au Puy du Fou.</p>
+                                    <p class="text-secondary small">Application web d'itinéraires optimisés pour le Puy du Fou avec espace gestionnaire.</p>
                                     <div class="technos">
                                         <span class="techno-tag">HTML</span>
                                         <span class="techno-tag">CSS</span>
@@ -224,6 +226,94 @@
                                         <span class="techno-tag">PHP</span>
                                         <span class="techno-tag">MVC</span>
                                         <span class="techno-tag">Git / GitHub</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 8 - Refonte DC Consult Symfony -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="225" data-category="web database stage app">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
+                                data-bs-target="#projetModal" data-projet="8">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges">
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-warning text-dark">En cours</span>
+                                    </div>
+                                    <div class="image-placeholder"><i class="bi bi-code-slash"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Refonte DC Consult - Symfony</h3>
+                                    <p class="text-secondary small">Refonte complète en application web dynamique avec Symfony, BDD et espace client/admin sécurisé.</p>
+                                    <div class="technos">
+                                        <span class="techno-tag">Symfony</span>
+                                        <span class="techno-tag">PHP</span>
+                                        <span class="techno-tag">MySQL</span>
+                                        <span class="techno-tag">OWASP</span>
+                                        <span class="techno-tag">Brevo</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 5 - Potage (Reulys) -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250" data-category="web stage">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
+                                data-bs-target="#projetModal" data-projet="5">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges">
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-success">Stage</span>
+                                    </div>
+                                    <div class="image-placeholder"><i class="bi bi-image"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Site vitrine Potage</h3>
+                                    <p class="text-secondary small">Création d'un site vitrine sur WordPress durant le stage chez Reulys.</p>
+                                    <div class="technos">
+                                        <span class="techno-tag">WordPress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 6 - Boulevard du Littoral (Reulys) -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300" data-category="web stage">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
+                                data-bs-target="#projetModal" data-projet="6">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges">
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-success">Stage</span>
+                                    </div>
+                                    <div class="image-placeholder"><i class="bi bi-image"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Site vitrine Boulevard du Littoral</h3>
+                                    <p class="text-secondary small">Création d'un site vitrine sur WordPress durant le stage chez Reulys.</p>
+                                    <div class="technos">
+                                        <span class="techno-tag">WordPress</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Projet 7 - La Tuile de Bois (Reulys) -->
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="350" data-category="web stage">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal"
+                                data-bs-target="#projetModal" data-projet="7">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges">
+                                        <span class="badge bg-primary">Web</span>
+                                        <span class="badge bg-success">Stage</span>
+                                    </div>
+                                    <div class="image-placeholder"><i class="bi bi-image"></i></div>
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Site vitrine La Tuile de Bois</h3>
+                                    <p class="text-secondary small">Création d'un site vitrine sur WordPress durant le stage chez Reulys.</p>
+                                    <div class="technos">
+                                        <span class="techno-tag">WordPress</span>
                                     </div>
                                 </div>
                             </div>
@@ -237,14 +327,14 @@
 
     <!-- Modal pour les détails du projet -->
     <div class="modal fade" id="projetModal" tabindex="-1" aria-labelledby="projetModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
             <div class="modal-content">
                 <div class="modal-header border-0 pb-0">
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4 pt-0" id="modal-projet-content">
-                    <!-- Le contenu sera chargé dynamiquement par JavaScript -->
+                <div class="modal-body" id="modal-projet-content">
+                    <!-- Contenu chargé dynamiquement -->
                 </div>
             </div>
         </div>
@@ -272,17 +362,16 @@
                         <div class="contacts d-flex flex-column gap-2">
                             <a class="contact-link" href="tel:+33754387386"><i class="bi bi-phone"></i> 07 54 38 73
                                 86</a>
-                            <a class="contact-link" href="mailto:thomas.dumont1806@gmail.com"><i
+                            <a class="contact-link" href="/cdn-cgi/l/email-protection#5f2b3730323e2c713b2a3230312b6e676f691f38323e3633713c3032"><i
                                     class="bi bi-envelope"></i>
-                                thomas.dumont1806@gmail.com</a>
+                                <span class="__cf_email__" data-cfemail="aadec2c5c7cbd984cedfc7c5c4de9b929a9ceacdc7cbc3c684c9c5c7">[email&#160;protected]</span></a>
                             <span class="contact-link"><i class="bi bi-geo-alt"></i> Pays de la Loire</span>
                         </div>
                     </div>
                     <div class="col-lg-5 text-lg-end">
                         <div class="actions d-flex flex-wrap justify-content-lg-end gap-2">
                             <a class="btn btn-outline-light btn-animated" href="#projets-hero"><i
-                                    class="bi bi-arrow-up"></i> Haut de
-                                page</a>
+                                    class="bi bi-arrow-up"></i> Haut de page</a>
                             <a class="btn btn-primary btn-animated" href="contact.html"><i class="bi bi-chat-dots"></i>
                                 Me contacter</a>
                         </div>
@@ -291,7 +380,7 @@
                                 aria-label="GitHub"><i class="bi bi-github"></i></a>
                             <a class="icon" href="https://www.linkedin.com/in/thomas-dumont-21ab19371" target="_blank"
                                 rel="noopener" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a class="icon" href="mailto:thomas.dumont1806@gmail.com" aria-label="Email"><i
+                            <a class="icon" href="/cdn-cgi/l/email-protection#3b4f5354565a48155f4e5654554f0a030b0d7b5c565a525715585456" aria-label="Email"><i
                                     class="bi bi-envelope"></i></a>
                         </div>
                     </div>
@@ -311,129 +400,212 @@
     </footer>
 
     <!-- JS Libraries -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
     <!-- Données des projets -->
     <script>
-        // Données des projets (facilement extensible)
         const projetsData = {
             1: {
                 titre: "Site vitrine DC Consult",
-                categorie: ["Web", "Projet académique"],
+                categorie: ["Web", "Stage"],
                 description: "Création complète d'un site vitrine responsive pour une entreprise de charpente métallique.",
                 details: `
                     <div class="modal-projet-img">
-                        <img src="../img/modal/1.png" alt="Image de l'index du site DC Consult" class="img-fluid rounded">
+                        <img src="../img/modal/1.png" alt="Site DC Consult" class="img-fluid rounded">
                     </div>
                     <p>Dans le cadre de mon stage, j'ai conçu et développé un site vitrine pour DC Consult, une entreprise spécialisée dans la charpente métallique.</p>
                     <p><strong>Fonctionnalités principales :</strong></p>
                     <ul>
-                        <li>Design responsive</li>
-                        <li>Présentation de l'enterprise et de ses services de l'entreprise</li>
-                        <li>Page de contact avec formulaire fonctionnel grâce a PHPMailer</li>
+                        <li>Design responsive adapté à tous les écrans</li>
+                        <li>Présentation de l'entreprise et de ses services</li>
+                        <li>Page de contact avec formulaire fonctionnel via PHPMailer</li>
                     </ul>
                     <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP</p>
-                    <p>Ce projet m'a permis de consolider mes compétences en développement front-end et de comprendre les besoins clients dans un contexte professionnel.</p>
+                    <p>Ce projet m'a permis de consolider mes compétences en développement front-end et de comprendre les besoins clients dans un contexte professionnel réel.</p>
                     <a href="https://www.dc-consult-bet.fr/" target="_blank" class="btn btn-primary btn-animated me-2">
                         <i class="bi bi-link me-2"></i>Voir le site
                     </a>
-                    <a href="https://github.com/dootod/dc-consult" target="_blank" class="btn btn-primary btn-animated me-2">
-                        <i class="bi bi-link me-2"></i>Voir le GitHub
+                    <a href="https://github.com/dootod/dc-consult" target="_blank" class="btn btn-outline-light btn-animated">
+                        <i class="bi bi-github me-2"></i>GitHub
                     </a>
                 `,
                 technos: ["HTML", "CSS", "JavaScript", "PHP"],
-                date: "Mai-Juin 2025",
-                contexte: "Stage en entreprise",
-                images: []
+                date: "Mai–Juin 2025",
+                contexte: "Stage en entreprise"
             },
 
             2: {
                 titre: "Projet AP1",
                 categorie: ["Web", "Projet académique"],
-                description: "Création en équipe du site vitrine de l'entreprise BST79 via le CMS Wordpress.",
+                description: "Création en équipe du site vitrine de l'entreprise BST79 via le CMS WordPress.",
                 details: `
                     <div class="modal-projet-img">
                         <img src="../img/modal/2.png" alt="Projet AP1" class="img-fluid rounded">
                     </div>
-                    <p>Dans le cadre de notre AP1, nous avons renforcer nos compétences en conception et création de sites web. Ce projet nous a permis de mettre en pratique les connaissances acquises en cours, notamment grâce à l’utilisation du CMS WordPress, tout en apprenant à travailler efficacement en équipe. L’objectif principal était d’approfondir nos compétences techniques, organisationnelles et créatives en réalisant un projet concret et professionnel.
-                    </p>
+                    <p>Dans le cadre de l'AP1, nous avons renforcé nos compétences en conception et création de sites web en réalisant le site vitrine de BST79 sous WordPress.</p>
                     <p><strong>Fonctionnalités principales :</strong></p>
                     <ul>
-                        <li>Présentation de l'enterprise et de ses produits et services</li>
+                        <li>Présentation de l'entreprise, de ses produits et services</li>
                         <li>Design responsive</li>
                     </ul>
-                    <p><strong>Technologies utilisées :</strong> Wordpress</p>
-                    <p>Ce projet de création d’un site vitrine sous WordPress m’a permis de développer mes compétences en travail d’équipe, en communication et en gestion de projet. J’ai également renforcé mes connaissances techniques dans l’utilisation de WordPress, la personnalisation de thèmes et la mise en ligne d’un site professionnel, tout en apprenant à collaborer efficacement pour atteindre des objectifs communs.</p>
+                    <p><strong>Technologies utilisées :</strong> WordPress</p>
+                    <p>Ce projet m'a permis de développer mes compétences en travail d'équipe, en communication et en gestion de projet, tout en maîtrisant la personnalisation de thèmes WordPress.</p>
                     <a href="https://bst79.fr/" target="_blank" class="btn btn-primary btn-animated me-2">
                         <i class="bi bi-link me-2"></i>Voir le projet
                     </a>
                 `,
-                technos: ["Wordpress"],
-                date: "Novembre 2024 - Janvier 2025",
-                contexte: "Académique",
-                images: ["../img/modal/2.png"]
+                technos: ["WordPress"],
+                date: "Novembre 2024 – Janvier 2025",
+                contexte: "Académique"
             },
+
             3: {
                 titre: "Projet AP2",
                 categorie: ["Web", "Projet académique"],
-                description: "Création en équipe d'un site de gestion de placement sur un marché.",
+                description: "Site de gestion de placements sur un marché avec réservation en ligne.",
                 details: `
                     <div class="modal-projet-img">
                         <img src="../img/modal/3.png" alt="Projet AP2" class="img-fluid rounded">
                     </div>
-                    <p>Ce projet est un site web de gestion des emplacements sur un marché, développé en HTML, CSS et PHP. Les gestionnaires peuvent ajouter les dates et les emplacements disponibles, tandis que les commerçants peuvent ensuite les réserver en ligne. Le site intègre également un système d’inscription et de connexion pour sécuriser l’accès aux différentes fonctionnalités.</p>
+                    <p>Site web de gestion des emplacements sur un marché, permettant aux gestionnaires de créer des créneaux et aux commerçants de les réserver en ligne.</p>
                     <p><strong>Fonctionnalités principales :</strong></p>
                     <ul>
-                        <li>Système de connexion et d'inscription</li>
-                        <li>Système de reservation d'emplacement sur le marché pour les commerçants</li>
-                        <li>Système de gestion des emplacements et jours disponibles pour le gestionnaire</li>
+                        <li>Système d'inscription et de connexion sécurisé</li>
+                        <li>Réservation d'emplacements pour les commerçants</li>
+                        <li>Interface gestionnaire avec CRUD des emplacements et jours disponibles</li>
                         <li>Design responsive</li>
                     </ul>
-                    <p><strong>Technologies utilisées :</strong> HTML, CSS, PHP</p>
-                    <p>Ce projet de développement d’un site de gestion des emplacements sur un marché, réalisé en HTML, CSS et PHP, m’a permis de consolider mes compétences en programmation web et en conception d’interfaces fonctionnelles. J’ai mis en pratique mes connaissances en gestion de bases de données, en logique de traitement côté serveur et en organisation de code. Ce projet m’a également permis de perfectionner ma capacité à gérer un projet complet, de la phase de conception à la mise en ligne, tout en maintenant une bonne coordination au sein de l’équipe et une attention particulière à la qualité du rendu final.</p>
+                    <p><strong>Technologies utilisées :</strong> HTML, CSS, PHP, Git / GitHub</p>
+                    <p>Ce projet m'a permis de consolider mes compétences en gestion de bases de données, en logique serveur et en organisation de code au sein d'une équipe.</p>
                     <a href="https://github.com/dootod/PPE3-Tellis" target="_blank" class="btn btn-primary btn-animated me-2">
-                        <i class="bi bi-link me-2"></i>Voir le GitHub
+                        <i class="bi bi-github me-2"></i>GitHub
                     </a>
                     <a href="https://docs.google.com/document/d/1EdXL2z1TP6zftJrVgjkEX4NXyQUmN45hefqBiWjCPNw/edit?usp=sharing" target="_blank" class="btn btn-outline-light btn-animated">
-                        <i class="bi bi-chat-dots me-2"></i>En savoir plus
+                        <i class="bi bi-file-text me-2"></i>En savoir plus
                     </a>
                 `,
-                technos: ["HTML", "CSS", "PHP"],
+                technos: ["HTML", "CSS", "PHP", "Git / GitHub"],
                 date: "2025",
-                contexte: "Académique",
-                images: ["../img/modal/3.png"]
+                contexte: "Académique"
             },
 
             4: {
-                titre: "Projet AP3",
+                titre: "Projet AP3 - Puy du Fou",
                 categorie: ["Web", "Projet académique"],
-                description: "Création en équipe d'un site de gestion de placement sur un marché.",
+                description: "Application web d'itinéraires optimisés pour le Puy du Fou avec espace gestionnaire complet.",
                 details: `
                     <div class="modal-projet-img">
-                        <img src="../img/modal/4.png" alt="Projet AP3" class="img-fluid rounded">
+                        <img src="../img/modal/4.png" alt="Projet AP3 - Puy du Fou" class="img-fluid rounded">
                     </div>
-                    <p>Courte description</p>
+                    <p>Application web permettant de créer un itinéraire optimisé pour organiser sa journée au Puy du Fou. Interface visiteur pour planifier et espace gestionnaire complet avec CRUD pour administrer les attractions, horaires et données du parc.</p>
                     <p><strong>Fonctionnalités principales :</strong></p>
                     <ul>
-                        <li>Fonctionalité</li>
+                        <li>Création d'itinéraires personnalisés</li>
+                        <li>Interface gestionnaire avec CRUD complet</li>
+                        <li>Gestion des attractions et horaires</li>
                     </ul>
-                    <p><strong>Technologies utilisées :</strong> HTML, CSS, JS, PHP, MVC, Git / GitHub</p>
-                    <p>Grosse description</p>
+                    <p><strong>Technologies utilisées :</strong> HTML, CSS, JavaScript, PHP, Architecture MVC, Git / GitHub</p>
+                    <p>Ce projet m'a permis de structurer une application web complète selon le pattern MVC, de gérer des rôles utilisateurs distincts et de travailler en équipe avec un vrai workflow Git.</p>
                     <a href="https://github.com/dootod/ppe-puy-du-fou" target="_blank" class="btn btn-primary btn-animated me-2">
-                        <i class="bi bi-link me-2"></i>Voir le GitHub
+                        <i class="bi bi-github me-2"></i>GitHub
                     </a>
                     <a href="https://docs.google.com/document/d/1o7EyvQIDFUFVzbzc7s6GtNTR6X0muVc1WQo6PSC0gfg/edit?usp=sharing" target="_blank" class="btn btn-outline-light btn-animated">
-                        <i class="bi bi-chat-dots me-2"></i>En savoir plus
+                        <i class="bi bi-file-text me-2"></i>En savoir plus
                     </a>
                 `,
                 technos: ["HTML", "CSS", "JS", "PHP", "MVC", "Git / GitHub"],
                 date: "2025",
-                contexte: "Académique",
-                images: ["../img/modal/3.png"]
+                contexte: "Académique"
             },
+
+            8: {
+                titre: "Refonte DC Consult - Symfony",
+                categorie: ["Web", "Stage", "En cours"],
+                description: "Refonte complète du site DC Consult en application web dynamique avec Symfony, BDD et espaces sécurisés.",
+                details: `
+                    <div class="d-flex align-items-center gap-3 mb-4 p-3" style="background:rgba(252,196,25,.08);border:1px solid rgba(252,196,25,.25);border-radius:12px;">
+                        <i class="bi bi-hammer" style="font-size:1.4rem;color:#fcc419;flex-shrink:0;"></i>
+                        <p class="mb-0 small" style="color:#f0d080;">Projet en cours de développement - les pages publiques du site restent à finaliser.</p>
+                    </div>
+                    <p>Refonte ambitieuse du site vitrine DC Consult en une véritable application web dynamique. À la demande du client, le site évolue d'une simple vitrine statique vers une plateforme complète avec gestion documentaire, utilisateurs et projets, entièrement sécurisée selon les standards OWASP.</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>Authentification sécurisée avec Symfony Security et hiérarchie des rôles (User / Admin)</li>
+                        <li>Gestion de documents (upload, consultation, téléchargement)</li>
+                        <li>Gestion des utilisateurs (CRUD admin)</li>
+                        <li>Gestion des projets et affichage dynamique sur la page publique</li>
+                        <li>Espaces distincts Admin et User</li>
+                        <li>Page contact avec formulaire et envoi de mails via Brevo</li>
+                        <li>Gestion du compte utilisateur (profil, mot de passe)</li>
+                        <li>Sécurisation complète selon les recommandations OWASP</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> Symfony, PHP, MySQL, Twig, Brevo API, Git / GitHub</p>
+                    <p>Ce projet est le plus complet et le plus ambitieux que j'ai réalisé à ce jour - il m'a permis de maîtriser Symfony en profondeur, de travailler la sécurité applicative sérieusement et de livrer une vraie valeur métier à un client réel.</p>
+                    <a href="https://github.com/dootod/dc-consult-v2" target="_blank" class="btn btn-primary btn-animated me-2">
+                        <i class="bi bi-github me-2"></i>GitHub
+                    </a>
+                `,
+                technos: ["Symfony", "PHP", "MySQL", "Twig", "Brevo", "Git / GitHub"],
+                date: "2026 - En cours",
+                contexte: "Commande client"
+            },
+
+            5: {
+                titre: "Site vitrine Potage",
+                categorie: ["Web", "Stage"],
+                description: "Création d'un site vitrine WordPress pour le client Potage, réalisé lors du stage chez Reulys.",
+                details: `
+                    <p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client Potage.</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>À compléter</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> WordPress</p>
+                    <p>À compléter</p>
+                `,
+                technos: ["WordPress"],
+                date: "2026",
+                contexte: "Stage - Reulys"
+            },
+
+            6: {
+                titre: "Site vitrine Boulevard du Littoral",
+                categorie: ["Web", "Stage"],
+                description: "Création d'un site vitrine WordPress pour le client Boulevard du Littoral, réalisé lors du stage chez Reulys.",
+                details: `
+                    <p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client Boulevard du Littoral.</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>À compléter</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> WordPress</p>
+                    <p>À compléter</p>
+                `,
+                technos: ["WordPress"],
+                date: "2026",
+                contexte: "Stage - Reulys"
+            },
+
+            7: {
+                titre: "Site vitrine La Tuile de Bois",
+                categorie: ["Web", "Stage"],
+                description: "Création d'un site vitrine WordPress pour le client La Tuile de Bois, réalisé lors du stage chez Reulys.",
+                details: `
+                    <p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client La Tuile de Bois.</p>
+                    <p><strong>Fonctionnalités principales :</strong></p>
+                    <ul>
+                        <li>À compléter</li>
+                    </ul>
+                    <p><strong>Technologies utilisées :</strong> WordPress</p>
+                    <p>À compléter</p>
+                     `,
+                technos: ["WordPress"],
+                date: "2026",
+                contexte: "Stage - Reulys"
+            }
         };
     </script>
 
