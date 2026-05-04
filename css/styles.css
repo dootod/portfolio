@@ -102,40 +102,6 @@ body {
   border-radius: 999px;
 }
 
-.navbar .dropdown-menu {
-  background-color: rgba(19, 28, 59, 0.95);
-  border: 1px solid rgba(255, 255, 255, .12);
-  border-radius: 12px;
-  padding: 6px;
-  transform-origin: top right;
-  opacity: 0;
-  transform: translateY(8px) scale(0.98);
-  transition: opacity .18s ease, transform .18s ease;
-}
-
-.navbar .dropdown-menu.show {
-  opacity: 1;
-  transform: translateY(0) scale(1);
-}
-
-.navbar .dropdown-item {
-  color: #d6dcf0;
-  border-radius: 8px;
-  transition: background-color .15s ease, color .15s ease, transform .15s ease;
-}
-
-.navbar .dropdown-item:hover,
-.navbar .dropdown-item:focus {
-  color: #fff;
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateX(2px);
-}
-
-.navbar .dropdown-item.active {
-  color: #fff;
-  background: rgba(91, 141, 239, 0.25);
-}
-
 /* Animation de la flèche du dropdown au survol (Desktop seulement) */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .chevron {
@@ -281,51 +247,6 @@ body {
   border: 1px solid rgba(91, 141, 239, .35);
 }
 
-/* Skills - MODIFICATIONS POUR UNIFORMISER LES CARRÉS */
-.skills-grid .skill-item {
-  display: grid;
-  place-items: center;
-  gap: .5rem;
-  padding: 18px 8px;
-  border-radius: 12px;
-  background: rgba(255, 255, 255, .06);
-  border: 1px solid rgba(255, 255, 255, .12);
-  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease, background-color .25s ease;
-  min-height: 130px; /* Hauteur uniforme */
-  height: 100%;
-}
-
-.skills-grid .skill-item:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, .32);
-  border-color: rgba(91, 141, 239, .45);
-  background-color: rgba(255, 255, 255, .08);
-}
-
-.skills-grid i, 
-.skills-grid img {
-  font-size: 42px;
-  width: 42px;
-  height: 42px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.skills-grid span {
-  font-size: .95rem;
-  color: #cdd7ff;
-  text-align: center;
-  word-break: break-word;
-  max-width: 100%;
-}
-
-/* Pour les textes plus longs */
-.skills-grid .skill-text {
-  font-size: .85rem;
-  line-height: 1.2;
-}
-
 /* Footer */
 .footer {
   background: linear-gradient(180deg, rgba(255, 255, 255, .06), rgba(255, 255, 255, .03));
@@ -336,17 +257,6 @@ body {
 .footer-neo {
   position: relative;
   overflow: hidden;
-}
-
-.footer-neo .footer-canvas {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-}
-
-.footer-neo .footer-canvas .stripe,
-.footer-neo .footer-canvas .dots {
-  display: none;
 }
 
 .footer-neo .glass-panel {
@@ -641,28 +551,13 @@ body {
   box-shadow: 0 10px 22px rgba(0, 0, 0, .35);
 }
 
-/* Dropdown hover (desktop) */
-@media (min-width: 992px) {
-  .navbar .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0;
-  }
-}
+
 
 @media (max-width: 576px) {
   .section-padding {
     padding: 64px 0;
   }
   
-  /* Ajustement pour mobile */
-  .skills-grid .skill-item {
-    min-height: 110px;
-    padding: 14px 6px;
-  }
-  
-  .skills-grid .skill-text {
-    font-size: .8rem;
-  }
 }
 
 /* CV section custom */
@@ -793,6 +688,52 @@ body {
   height: 3px;
   background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary));
   border-radius: 3px;
+}
+
+.title-accent-left {
+  position: relative;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.title-accent-left:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 48px;
+  height: 3px;
+  background: linear-gradient(90deg, var(--brand-accent), var(--brand-primary));
+  border-radius: 3px;
+}
+
+/* Hero card stats */
+.hero-stats {
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  padding-top: 14px;
+  margin-top: 4px;
+}
+
+.hero-stat-value {
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #e9eef7;
+  line-height: 1.2;
+}
+
+.hero-stat-label {
+  font-size: .68rem;
+  color: #7a8ab8;
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-top: 2px;
+}
+
+.hero-stat-sep {
+  width: 1px;
+  background: rgba(255, 255, 255, .10);
+  align-self: stretch;
+  margin: 2px 0;
 }
 
 /* Dropdown menu styles */

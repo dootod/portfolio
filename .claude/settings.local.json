@@ -23,7 +23,9 @@
       "WebFetch(domain:siecledigital.fr)",
       "WebFetch(domain:www.blogdumoderateur.com)",
       "WebFetch(domain:pandia.pro)",
-      "WebFetch(domain:www.upmynt.com)"
+      "WebFetch(domain:www.upmynt.com)",
+      "Bash(Get-ChildItem -Path \"C:\\\\laragon\\\\www\\\\portfolio\" -Recurse -Include *.html, *.css, *.js, *.php, *.json -Force)",
+      "Bash(Select-Object FullName)"
     ]
   }
 }
