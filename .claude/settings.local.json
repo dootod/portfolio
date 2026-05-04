@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(type \"%USERPROFILE%\\\\.claude\\\\settings.json\")",
+      "Bash(errorlevel 1 echo NOT_FOUND)",
+      "Bash(bash ~/.claude/statusline-command.sh)",
+      "PowerShell('{\"workspace\":{\"current_dir\":\"C:/laragon/www/portfolio\"},\"model\":{\"display_name\":\"Opus 4.7\"},\"context_window\":{\"used_percentage\":15}}' | powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/dootod/.claude/statusline-command.ps1)",
+      "PowerShell('{\"workspace\":{\"current_dir\":\"C:/laragon/www/portfolio\"},\"model\":{\"display_name\":\"Opus 4.7\"},\"context_window\":{\"used_percentage\":3}}' | powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/dootod/.claude/statusline-command.ps1)",
+      "PowerShell(@\\(5, 27, 50, 73, 95\\) | ForEach-Object { $p = $_; \"{`\"context_window`\":{`\"used_percentage`\":$p},`\"workspace`\":{`\"current_dir`\":`\"C:/laragon/www/portfolio`\"},`\"model`\":{`\"display_name`\":`\"Opus 4.7`\"}}\" | powershell -NoProfile -ExecutionPolicy Bypass -File C:/Users/dootod/.claude/statusline-command.ps1; Write-Host \"\" })",
+      "Bash(gh repo *)",
+      "WebFetch(domain:github.com)",
+      "Read(//c/Users/dootod/.claude/**)",
+      "Read(//c/Users/dootod/.claude/plugins/**)",
+      "Bash(npm --version)",
+      "Bash(Get-ChildItem -Path \"C:\\\\laragon\\\\www\\\\portfolio\" -Recurse -File)",
+      "Bash(Select-Object -Property FullName, Extension)",
+      "Bash(Sort-Object FullName)",
+      "Bash(Format-Table -AutoSize)",
+      "WebFetch(domain:docs.google.com)",
+      "WebFetch(domain:doc-04-30-sheets.googleusercontent.com)",
+      "Bash(python scripts/search.py \"portfolio developer dark glassmorphism modern\" --design-system -p \"Thomas Dumont Portfolio\" -f markdown)",
+      "Bash(python cli/assets/scripts/search.py \"portfolio developer dark glassmorphism modern\" --design-system -p \"Thomas Dumont Portfolio\" -f markdown)",
+      "WebFetch(domain:siecledigital.fr)",
+      "WebFetch(domain:www.blogdumoderateur.com)",
+      "WebFetch(domain:pandia.pro)",
+      "WebFetch(domain:www.upmynt.com)"
+    ]
+  }
+}

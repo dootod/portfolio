@@ -137,9 +137,9 @@
 
                     <div class="row g-4">
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="50">
-                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                            <div class="rubrique-card rubrique-ia-apps card h-100 shadow-sm border-0 text-center">
                                 <div class="card-body p-4">
-                                    <div class="rubrique-icon mb-3">
+                                    <div class="rubrique-icon rubrique-icon-blue mb-3">
                                         <i class="bi bi-phone"></i>
                                     </div>
                                     <h3 class="h5 mb-3">IA et développement d'applications</h3>
@@ -154,9 +154,9 @@
                         </div>
 
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                            <div class="rubrique-card rubrique-ia-web card h-100 shadow-sm border-0 text-center">
                                 <div class="card-body p-4">
-                                    <div class="rubrique-icon mb-3">
+                                    <div class="rubrique-icon rubrique-icon-cyan mb-3">
                                         <i class="bi bi-globe"></i>
                                     </div>
                                     <h3 class="h5 mb-3">IA et développement web</h3>
@@ -171,9 +171,9 @@
                         </div>
 
                         <div class="col-md-4" data-aos="fade-up" data-aos-delay="150">
-                            <div class="rubrique-card card h-100 shadow-sm border-0 text-center">
+                            <div class="rubrique-card rubrique-ia-tools card h-100 shadow-sm border-0 text-center">
                                 <div class="card-body p-4">
-                                    <div class="rubrique-icon mb-3">
+                                    <div class="rubrique-icon rubrique-icon-purple mb-3">
                                         <i class="bi bi-tools"></i>
                                     </div>
                                     <h3 class="h5 mb-3">Outils IA pour développeurs</h3>
@@ -369,56 +369,192 @@
     <section id="articles" class="section-padding bg-body-tertiary">
         <div class="container">
             <div class="row justify-content-center" data-aos="fade-up">
-                <div class="col-lg-10">
+                <div class="col-lg-11">
                     <h2 class="section-title title-accent text-center">Articles de veille</h2>
-                    <p class="text-center text-secondary mb-5">Dernières actualités sur l'IA dans le développement</p>
+                    <p class="text-center text-secondary mb-4">Actualités sélectionnées sur l'IA dans le développement</p>
 
-                    <div class="row g-4">
-                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="50">
-                            <div class="article-card card h-100 shadow-sm border-0">
-                                <div class="card-body p-4">
-                                    <div class="article-meta d-flex justify-content-between mb-3">
-                                        <span class="badge bg-primary">IA & Développement</span>
-                                        <span class="text-secondary small">[Date]</span>
-                                    </div>
-                                    <h3 class="h5 mb-3">[Titre de l'article]</h3>
-                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
-                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
-                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-                            <div class="article-card card h-100 shadow-sm border-0">
-                                <div class="card-body p-4">
-                                    <div class="article-meta d-flex justify-content-between mb-3">
-                                        <span class="badge bg-success">Outils IA</span>
-                                        <span class="text-secondary small">[Date]</span>
-                                    </div>
-                                    <h3 class="h5 mb-3">[Titre de l'article]</h3>
-                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
-                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
-                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4" data-aos="zoom-in" data-aos-delay="150">
-                            <div class="article-card card h-100 shadow-sm border-0">
-                                <div class="card-body p-4">
-                                    <div class="article-meta d-flex justify-content-between mb-3">
-                                        <span class="badge bg-info">Développement Web</span>
-                                        <span class="text-secondary small">[Date]</span>
-                                    </div>
-                                    <h3 class="h5 mb-3">[Titre de l'article]</h3>
-                                    <p class="text-secondary small mb-3">Source : [Nom du site]</p>
-                                    <p class="text-secondary mb-3">[Résumé court de l'article]</p>
-                                    <a href="#" class="article-link" target="_blank">Lire l'article →</a>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Filtres par catégorie -->
+                    <div class="article-filter-tabs mb-5" data-aos="fade-up" data-aos-delay="50">
+                        <button class="filter-tab active" data-filter="all"><i class="bi bi-grid me-1"></i>Tous</button>
+                        <button class="filter-tab" data-filter="ia-dev"><i class="bi bi-cpu me-1"></i>IA & Développement</button>
+                        <button class="filter-tab" data-filter="outils"><i class="bi bi-tools me-1"></i>Outils IA</button>
+                        <button class="filter-tab" data-filter="web"><i class="bi bi-globe me-1"></i>Développement Web</button>
+                        <button class="filter-tab" data-filter="productivite"><i class="bi bi-speedometer2 me-1"></i>Productivité</button>
                     </div>
+
+                    <div class="row g-4" id="articles-grid">
+
+                        <!-- Article 1 — Blog du Modérateur — IA & Développement -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="ia-dev" data-aos="fade-up" data-aos-delay="50">
+                            <div class="article-card-v2">
+                                <div class="article-image-area ia-dev-gradient">
+                                    <i class="bi bi-code-slash article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-ia-dev">IA & Développement</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Oct 2025</span>
+                                    </div>
+                                    <h3 class="article-title">Étude : comment les développeurs utilisent l'IA en 2025</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Blog du Modérateur</p>
+                                    <p class="article-summary">Une étude JetBrains révèle une intégration massive de l'IA dans les workflows de développement, avec des avis professionnels partagés sur son impact réel.</p>
+                                    <a href="https://www.blogdumoderateur.com/comment-developpeurs-utilisent-ia-2025/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 2 — Blog du Modérateur — Développement Web -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="web" data-aos="fade-up" data-aos-delay="100">
+                            <div class="article-card-v2">
+                                <div class="article-image-area web-gradient">
+                                    <i class="bi bi-globe article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-web">Développement Web</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Jan 2025</span>
+                                    </div>
+                                    <h3 class="article-title">Comment l'IA transforme le métier de développeur web</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Blog du Modérateur</p>
+                                    <p class="article-summary">L'IA redéfinit les rôles et débouchés des développeurs web, exigeant de nouvelles bonnes pratiques dans la création d'interfaces et de services en ligne.</p>
+                                    <a href="https://www.blogdumoderateur.com/comment-ia-transforme-metier-developpeur-web-bonnes-pratiques-nouveau-role-debouches/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 3 — Pandia.pro — Outils IA -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="outils" data-aos="fade-up" data-aos-delay="150">
+                            <div class="article-card-v2">
+                                <div class="article-image-area outils-gradient">
+                                    <i class="bi bi-file-earmark-pdf article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-outils">Outils IA</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Avr 2026</span>
+                                    </div>
+                                    <h3 class="article-title">Comment utiliser Claude pour analyser des PDF et documents</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Pandia.pro</p>
+                                    <p class="article-summary">Guide pratique pour exploiter les capacités de Claude dans l'analyse de documents et fichiers PDF, un atout pour les développeurs et étudiants en informatique.</p>
+                                    <a href="https://pandia.pro/guide/comment-utiliser-claude-pour-analyser-des-pdf-et-documents/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 4 — Blog du Modérateur — Outils IA -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="outils" data-aos="fade-up" data-aos-delay="50">
+                            <div class="article-card-v2">
+                                <div class="article-image-area outils-gradient">
+                                    <i class="bi bi-robot article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-outils">Outils IA</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Avr 2025</span>
+                                    </div>
+                                    <h3 class="article-title">OpenAI déploie ses nouveaux modèles GPT-4.1 dédiés aux développeurs</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Blog du Modérateur</p>
+                                    <p class="article-summary">Trois nouveaux modèles GPT-4.1, mini et nano disponibles via API, avec des capacités de génération de code renforcées pour les équipes de développement.</p>
+                                    <a href="https://www.blogdumoderateur.com/openai-deploie-nouveaux-modeles-gpt-4-1/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 5 — Blog du Modérateur — IA & Développement -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="ia-dev" data-aos="fade-up" data-aos-delay="100">
+                            <div class="article-card-v2">
+                                <div class="article-image-area ia-dev-gradient">
+                                    <i class="bi bi-graph-down-arrow article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-ia-dev">IA & Développement</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Juil 2025</span>
+                                    </div>
+                                    <h3 class="article-title">L'IA ralentit de 19 % les développeurs pour la résolution de problèmes</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Blog du Modérateur</p>
+                                    <p class="article-summary">Une étude contre-intuitive révèle que les assistants IA peuvent freiner les développeurs sur les tâches complexes, malgré leur popularité croissante.</p>
+                                    <a href="https://www.blogdumoderateur.com/ia-ralentit-19-developpeurs-resolution-problemes/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 6 — UpMynt — Productivité -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="productivite" data-aos="fade-up" data-aos-delay="150">
+                            <div class="article-card-v2">
+                                <div class="article-image-area productivite-gradient">
+                                    <i class="bi bi-speedometer2 article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-productivite">Productivité</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Avr 2026</span>
+                                    </div>
+                                    <h3 class="article-title">Tableau de bord personnalisé et IA : la productivité en question</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>UpMynt</p>
+                                    <p class="article-summary">Génération de tableaux de bord personnalisés avec l'IA et analyse de l'impact réel des assistants intelligents sur la productivité des équipes tech.</p>
+                                    <a href="https://www.upmynt.com/up317-tableau-de-bord/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 7 — Pandia.pro — Outils IA -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="outils" data-aos="fade-up" data-aos-delay="50">
+                            <div class="article-card-v2">
+                                <div class="article-image-area outils-gradient">
+                                    <i class="bi bi-chat-dots article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-outils">Outils IA</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Avr 2026</span>
+                                    </div>
+                                    <h3 class="article-title">Comment utiliser Le Chat de Mistral AI au quotidien</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>Pandia.pro</p>
+                                    <p class="article-summary">Tutoriel complet sur l'intégration de l'outil de chat de Mistral AI dans les workflows quotidiens des développeurs et professionnels du numérique.</p>
+                                    <a href="https://pandia.pro/guide/comment-utiliser-le-chat-de-mistral-ai-au-quotidien/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Article 8 — UpMynt — Outils IA -->
+                        <div class="col-md-6 col-lg-4 article-item" data-category="outils" data-aos="fade-up" data-aos-delay="100">
+                            <div class="article-card-v2">
+                                <div class="article-image-area outils-gradient">
+                                    <i class="bi bi-palette article-image-icon"></i>
+                                </div>
+                                <div class="article-body">
+                                    <div class="article-meta-row">
+                                        <span class="article-badge badge-outils">Outils IA</span>
+                                        <span class="article-date"><i class="bi bi-calendar3 me-1"></i>Avr 2026</span>
+                                    </div>
+                                    <h3 class="article-title">Claude Opus 4.7 : génération de vidéos et contenus visuels de marque</h3>
+                                    <p class="article-source"><i class="bi bi-link-45deg me-1"></i>UpMynt</p>
+                                    <p class="article-summary">Claude Opus 4.7 et Claude Design permettent de générer des vidéos brandées, présentations et bannières professionnelles directement depuis l'IA.</p>
+                                    <a href="https://www.upmynt.com/up315-encore-lui/" class="article-cta" target="_blank" rel="noopener">
+                                        Lire l'article <i class="bi bi-arrow-right ms-1"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <p id="no-articles-msg" class="text-center text-secondary mt-4" style="display:none;">Aucun article dans cette catégorie pour le moment.</p>
                 </div>
             </div>
         </div>

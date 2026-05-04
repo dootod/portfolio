@@ -90,6 +90,19 @@
   background: rgba(91, 141, 239, 0.22);
 }
 
+/* ── Rubrique color accents ── */
+.rubrique-ia-apps { border-top: 3px solid rgba(91, 141, 239, 0.55) !important; }
+.rubrique-ia-web  { border-top: 3px solid rgba(6, 182, 212, 0.55) !important; }
+.rubrique-ia-tools{ border-top: 3px solid rgba(139, 92, 246, 0.55) !important; }
+
+.rubrique-icon-blue   { color: #a8c2f8; background: rgba(91, 141, 239, 0.12); border-color: rgba(91, 141, 239, 0.22); }
+.rubrique-icon-cyan   { color: #67e8f9; background: rgba(6, 182, 212, 0.12);  border-color: rgba(6, 182, 212, 0.22); }
+.rubrique-icon-purple { color: #c4b5fd; background: rgba(139, 92, 246, 0.12); border-color: rgba(139, 92, 246, 0.22); }
+
+.rubrique-ia-apps:hover  { border-top-color: rgba(91, 141, 239, 0.80) !important; }
+.rubrique-ia-web:hover   { border-top-color: rgba(6, 182, 212, 0.80) !important; }
+.rubrique-ia-tools:hover { border-top-color: rgba(139, 92, 246, 0.80) !important; }
+
 /* ── Tags ── */
 .tags {
   display: flex;
@@ -310,5 +323,256 @@
 
   .method-visual {
     font-size: 50px;
+  }
+}
+
+/* ═══════════════════════════════════════════
+   Filtres articles
+═══════════════════════════════════════════ */
+.article-filter-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filter-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #b7c2e0;
+  font-size: 0.82rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  font-family: inherit;
+}
+
+.filter-tab:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+.filter-tab.active {
+  background: rgba(91, 141, 239, 0.18);
+  border-color: rgba(91, 141, 239, 0.45);
+  color: #a8c2f8;
+}
+
+/* ═══════════════════════════════════════════
+   Nouvelle carte article (v2)
+═══════════════════════════════════════════ */
+.article-card-v2 {
+  border-radius: 20px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article-card-v2:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.32);
+  border-color: rgba(91, 141, 239, 0.28);
+}
+
+/* Zone en-tête colorée */
+.article-image-area {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.article-image-area::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.28));
+}
+
+/* Dégradés par catégorie */
+.ia-dev-gradient {
+  background: linear-gradient(135deg, rgba(91, 141, 239, 0.28) 0%, rgba(75, 124, 222, 0.10) 100%);
+}
+
+.outils-gradient {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.28) 0%, rgba(109, 40, 217, 0.10) 100%);
+}
+
+.web-gradient {
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.28) 0%, rgba(8, 145, 178, 0.10) 100%);
+}
+
+.productivite-gradient {
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.28) 0%, rgba(22, 163, 74, 0.10) 100%);
+}
+
+.article-image-icon {
+  font-size: 50px;
+  opacity: 0.55;
+  position: relative;
+  z-index: 1;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.ia-dev-gradient .article-image-icon  { color: #a8c2f8; }
+.outils-gradient .article-image-icon  { color: #c4b5fd; }
+.web-gradient .article-image-icon     { color: #67e8f9; }
+.productivite-gradient .article-image-icon { color: #86efac; }
+
+.article-card-v2:hover .article-image-icon {
+  opacity: 0.80;
+  transform: scale(1.08);
+}
+
+/* Corps */
+.article-body {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.article-meta-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+/* Badges catégorie */
+.article-badge {
+  display: inline-block;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.badge-ia-dev {
+  background: rgba(91, 141, 239, 0.18);
+  border: 1px solid rgba(91, 141, 239, 0.38);
+  color: #a8c2f8;
+}
+
+.badge-outils {
+  background: rgba(139, 92, 246, 0.18);
+  border: 1px solid rgba(139, 92, 246, 0.38);
+  color: #c4b5fd;
+}
+
+.badge-web {
+  background: rgba(6, 182, 212, 0.18);
+  border: 1px solid rgba(6, 182, 212, 0.38);
+  color: #67e8f9;
+}
+
+.badge-productivite {
+  background: rgba(34, 197, 94, 0.18);
+  border: 1px solid rgba(34, 197, 94, 0.38);
+  color: #86efac;
+}
+
+.article-date {
+  font-size: 0.72rem;
+  color: #6a7db5;
+}
+
+.article-title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #e9eef7;
+  line-height: 1.45;
+  margin-bottom: 8px;
+}
+
+.article-source {
+  font-size: 0.72rem;
+  color: #6a7db5;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.article-summary {
+  font-size: 0.83rem;
+  color: #b7c2e0;
+  line-height: 1.65;
+  flex: 1;
+  margin-bottom: 16px;
+}
+
+.article-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--brand-primary);
+  text-decoration: none;
+  font-size: 0.83rem;
+  font-weight: 500;
+  transition: color 0.2s ease, gap 0.2s ease;
+  margin-top: auto;
+}
+
+.article-cta:hover {
+  color: #fff;
+  gap: 8px;
+}
+
+.article-item {
+  transition: opacity 0.25s ease;
+}
+
+.article-item.hidden {
+  display: none;
+}
+
+#no-articles-msg {
+  font-size: 0.9rem;
+}
+
+/* Responsive article cards */
+@media (max-width: 768px) {
+  .article-image-area {
+    height: 100px;
+  }
+
+  .article-image-icon {
+    font-size: 38px;
+  }
+
+  .article-body {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .article-filter-tabs {
+    gap: 6px;
+  }
+
+  .filter-tab {
+    padding: 6px 14px;
+    font-size: 0.76rem;
   }
 }

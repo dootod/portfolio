@@ -72,4 +72,32 @@ document.addEventListener('DOMContentLoaded', function () {
       this.style.transform = 'translateY(0)';
     });
   });
+
+  // Filtres articles
+  const filterTabs = document.querySelectorAll('.filter-tab');
+  const articleItems = document.querySelectorAll('.article-item');
+  const noArticlesMsg = document.getElementById('no-articles-msg');
+
+  filterTabs.forEach(tab => {
+    tab.addEventListener('click', function () {
+      filterTabs.forEach(t => t.classList.remove('active'));
+      this.classList.add('active');
+
+      const filter = this.dataset.filter;
+      let visibleCount = 0;
+
+      articleItems.forEach(item => {
+        if (filter === 'all' || item.dataset.category === filter) {
+          item.classList.remove('hidden');
+          visibleCount++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+
+      if (noArticlesMsg) {
+        noArticlesMsg.style.display = visibleCount === 0 ? 'block' : 'none';
+      }
+    });
+  });
 });
