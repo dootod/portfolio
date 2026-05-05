@@ -158,7 +158,7 @@
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="8">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges"><span class="badge bg-primary">Web</span><span class="badge bg-warning text-dark">En cours</span></div>
-                                    <div class="image-placeholder"><i class="bi bi-code-slash"></i></div>
+                                    <img src="../img/modal/6.png" alt="Refonte DC Consult - Symfony">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Refonte DC Consult - Symfony</h3>
@@ -168,11 +168,25 @@
                             </div>
                         </div>
 
+                        <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="240" data-category="web app database school">
+                            <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="9">
+                                <div class="card-img-top projet-image">
+                                    <div class="projet-badges"><span class="badge bg-primary">Web</span><span class="badge bg-info text-dark">App</span><span class="badge bg-secondary">Académique</span></div>
+                                    <img src="../img/modal/7.png" alt="Projet AP4 - Gestion Judo">
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="h5 mb-2">Projet AP4</h3>
+                                    <p class="text-secondary small">Application web, mobile Android et API REST pour la gestion d'un club et de tournois de judo.</p>
+                                    <div class="technos"><span class="techno-tag">Symfony</span><span class="techno-tag">API REST</span><span class="techno-tag">Android</span><span class="techno-tag">MySQL</span><span class="techno-tag">Git / GitHub</span></div>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250" data-category="web stage">
                             <div class="projet-card card h-100 shadow-sm border-0" data-bs-toggle="modal" data-bs-target="#projetModal" data-projet="5">
                                 <div class="card-img-top projet-image">
                                     <div class="projet-badges"><span class="badge bg-primary">Web</span><span class="badge bg-success">Stage</span></div>
-                                    <div class="image-placeholder"><i class="bi bi-image"></i></div>
+                                    <img src="../img/modal/5.png" alt="Site vitrine Potage" class="img-fluid w-100 h-100" style="object-fit:cover;">
                                 </div>
                                 <div class="card-body">
                                     <h3 class="h5 mb-2">Site vitrine Potage</h3>
@@ -300,10 +314,16 @@
         8: {
             titre: "Refonte DC Consult - Symfony", categorie: ["Web", "Stage", "En cours"],
             description: "Refonte complète du site DC Consult en application web dynamique avec Symfony, BDD et espaces sécurisés.",
-            details: `<div class="d-flex align-items-center gap-3 mb-4 p-3" style="background:rgba(252,196,25,.08);border:1px solid rgba(252,196,25,.25);border-radius:12px;"><i class="bi bi-hammer" style="font-size:1.4rem;color:#fcc419;flex-shrink:0;"></i><p class="mb-0 small" style="color:#f0d080;">Projet en cours de développement - les pages publiques du site restent à finaliser.</p></div><p>Refonte ambitieuse du site vitrine DC Consult en une véritable application web dynamique avec gestion documentaire, utilisateurs et projets, sécurisée selon les standards OWASP.</p><p><strong>Fonctionnalités principales :</strong></p><ul><li>Authentification sécurisée avec Symfony Security et hiérarchie des rôles (User / Admin)</li><li>Gestion de documents (upload, consultation, téléchargement)</li><li>Gestion des utilisateurs (CRUD admin)</li><li>Gestion des projets et affichage dynamique sur la page publique</li><li>Page contact avec formulaire et envoi de mails via Brevo</li><li>Sécurisation complète selon les recommandations OWASP</li></ul><p><strong>Technologies utilisées :</strong> Symfony, PHP, MySQL, Twig, Brevo API, Git / GitHub</p><a href="https://github.com/dootod/dc-consult-v2" target="_blank" class="btn btn-primary btn-animated me-2"><i class="bi bi-github me-2"></i>GitHub</a>`,
+            details: `<div class="modal-projet-img"><img src="../img/modal/6.png" alt="Refonte DC Consult - Symfony" class="img-fluid rounded"></div><div class="d-flex align-items-center gap-3 mb-4 p-3" style="background:rgba(252,196,25,.08);border:1px solid rgba(252,196,25,.25);border-radius:12px;"><i class="bi bi-hammer" style="font-size:1.4rem;color:#fcc419;flex-shrink:0;"></i><p class="mb-0 small" style="color:#f0d080;">Projet en cours de développement - les pages publiques du site restent à finaliser.</p></div><p>Refonte ambitieuse du site vitrine DC Consult en une véritable application web dynamique avec gestion documentaire, utilisateurs et projets, sécurisée selon les standards OWASP.</p><p><strong>Fonctionnalités principales :</strong></p><ul><li>Authentification sécurisée avec Symfony Security et hiérarchie des rôles (User / Admin)</li><li>Gestion de documents (upload, consultation, téléchargement)</li><li>Gestion des utilisateurs (CRUD admin)</li><li>Gestion des projets et affichage dynamique sur la page publique</li><li>Page contact avec formulaire et envoi de mails via Brevo</li><li>Sécurisation complète selon les recommandations OWASP</li></ul><p><strong>Technologies utilisées :</strong> Symfony, PHP, MySQL, Twig, Brevo API, Git / GitHub</p><a href="https://github.com/dootod/dc-consult-v2" target="_blank" class="btn btn-primary btn-animated me-2"><i class="bi bi-github me-2"></i>GitHub</a>`,
             technos: ["Symfony", "PHP", "MySQL", "Twig", "Brevo", "Git / GitHub"], date: "2026 - En cours", contexte: "Commande client"
         },
-        5: { titre: "Site vitrine Potage", categorie: ["Web", "Stage"], description: "Site vitrine WordPress pour le client Potage, réalisé lors du stage chez Reulys.", details: `<p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client Potage.</p><p><strong>Technologies utilisées :</strong> WordPress</p>`, technos: ["WordPress"], date: "2026", contexte: "Stage - Reulys" },
+        9: {
+            titre: "Projet AP4 - Gestion Judo", categorie: ["Web", "Application", "Projet académique"],
+            description: "Système complet de gestion d'un club et de tournois de judo : application web Symfony, API REST et application mobile Android.",
+            details: `<div class="modal-projet-img"><img src="../img/modal/7.png" alt="Projet AP4 - Gestion Judo" class="img-fluid rounded"></div><p>Dans le cadre de l'AP4, développement d'un système complet multi-plateforme pour la gestion d'un club de judo et de ses tournois.</p><p><strong>Composants :</strong></p><ul><li><strong>Application web Symfony</strong> - espace administrateur pour gérer les membres, les compétitions et les résultats</li><li><strong>API REST Symfony</strong> - backend centralisé consommé par le web et le mobile</li><li><strong>Application mobile Android</strong> - accès aux tournois, résultats et informations du club depuis smartphone</li></ul><p><strong>Technologies utilisées :</strong> Symfony, PHP, API REST, Android (Java/Kotlin), MySQL, Git / GitHub</p><a href="https://github.com/dootod/tournois-app-web" target="_blank" class="btn btn-primary btn-animated me-2"><i class="bi bi-github me-2"></i>GitHub</a><a href="https://docs.google.com/document/d/1Xp2q1j0pkXFfTuSyuQCbWUldCTZrz6Uu/edit?usp=sharing" target="_blank" class="btn btn-outline-light btn-animated"><i class="bi bi-file-text me-2"></i>Documentation</a>`,
+            technos: ["Symfony", "PHP", "API REST", "Android", "MySQL", "Git / GitHub"], date: "2025–2026", contexte: "Académique"
+        },
+        5: { titre: "Site vitrine Potage", categorie: ["Web", "Stage"], description: "Site vitrine WordPress pour le client Potage, réalisé lors du stage chez Reulys.", details: `<div class="modal-projet-img"><img src="../img/modal/5.png" alt="Site vitrine Potage" class="img-fluid rounded"></div><p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client Potage.</p><p><strong>Technologies utilisées :</strong> WordPress</p><a href="https://potage-larochelle.fr/" target="_blank" class="btn btn-primary btn-animated"><i class="bi bi-globe me-2"></i>Voir le site</a>`, technos: ["WordPress"], date: "2026", contexte: "Stage - Reulys" },
         6: { titre: "Site vitrine Boulevard du Littoral", categorie: ["Web", "Stage"], description: "Site vitrine WordPress pour le client Boulevard du Littoral, réalisé lors du stage chez Reulys.", details: `<p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client Boulevard du Littoral.</p><p><strong>Technologies utilisées :</strong> WordPress</p>`, technos: ["WordPress"], date: "2026", contexte: "Stage - Reulys" },
         7: { titre: "Site vitrine La Tuile de Bois", categorie: ["Web", "Stage"], description: "Site vitrine WordPress pour le client La Tuile de Bois, réalisé lors du stage chez Reulys.", details: `<p>Site vitrine réalisé sous WordPress durant mon stage chez Reulys pour le client La Tuile de Bois.</p><p><strong>Technologies utilisées :</strong> WordPress</p>`, technos: ["WordPress"], date: "2026", contexte: "Stage - Reulys" }
     };
